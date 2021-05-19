@@ -1,0 +1,156 @@
+\begin{thebibliography}{26}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Nakamoto et~al.(2008)]{nakamoto2008bitcoin}
+Satoshi Nakamoto et~al.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock 2008.
+
+\bibitem[Wood(2014)]{Ethereum}
+Gavin Wood.
+\newblock Ethereum: A secure decentralised generalised transaction ledger.
+\newblock \emph{Ethereum project yellow paper}, 151:\penalty0 1--32, 2014.
+
+\bibitem[hyp(2020)]{hyperledger-fabric}
+Open, proven, enterprise-grade dlt.
+\newblock
+  \url{https://www.hyperledger.org/wp-content/uploads/2020/03/hyperledger_fabric_whitepaper.pdf},
+  2020.
+
+\bibitem[fis(2020)]{fisco}
+{FISCO BCOS}.
+\newblock \url{https://fisco-bcos.org/}, 2020.
+
+\bibitem[IO(2017)]{EOS}
+EOS IO.
+\newblock Eos. io technical white paper.
+\newblock \emph{EOS. IO (accessed 18 December 2017) https://github.
+  com/EOSIO/Documentation}, 2017.
+
+\bibitem[dap(2020)]{dapp-stats}
+Dapp statistics.
+\newblock \url{https://www.stateofthedapps.com/stats}, 2020.
+
+\bibitem[Siegel(2016)]{DAO_attacks}
+David Siegel.
+\newblock \emph{Understanding the DAO Attack}, 2016.
+\newblock URL \url{https://www.coindesk.com/understanding-dao-hack-
+  journalists}.
+
+\bibitem[PeckShield(2019)]{EOS_attacks}
+PeckShield.
+\newblock \emph{EOS: Transaction Congestion Attack}, 2019.
+\newblock URL \url{https://medium.com/@peckshield/eos-transaction-congestion-
+  attack-attackers-could-paralyze-eos-network-with-minimal- cost-9adfb4d16c82}.
+
+\bibitem[gas(2020)]{gas-fee}
+Ethereum transaction fees fall by 75\% as congestion eases.
+\newblock
+  \url{https://cointelegraph.com/news/ethereum-transaction-fees-fall-by-75-as-congestion-eases},
+  2020.
+
+\bibitem[Jiang et~al.(2018)Jiang, Liu, and Chan]{jiang2018contractfuzzer}
+Bo~Jiang, Ye~Liu, and WK~Chan.
+\newblock Contractfuzzer: Fuzzing smart contracts for vulnerability detection.
+\newblock In \emph{Proceedings of the 33rd ACM/IEEE International Conference on
+  Automated Software Engineering}, pages 259--269. ACM, 2018.
+
+\bibitem[oye(2019)]{oyente}
+Oyente.
+\newblock \url{https://github.com/melonproject/oyente}, 2019.
+\newblock An Analysis Tool for Smart Contracts.
+
+\bibitem[Sof(2019)]{securify}
+\emph{Securify}.
+\newblock Sofware Reliability Lab, 2019.
+\newblock URL \url{https://securify.ch/}.
+
+\bibitem[Sma(2019)]{SmartCheck}
+\emph{SmartCheck}.
+\newblock SmartDec, 2019.
+\newblock URL \url{https://tool.smartdec.net}.
+
+\bibitem[Wang et~al.(2019)Wang, Li, Lin, Ma, and Liu]{wang2019vultron}
+Haijun Wang, Yi~Li, Shang-Wei Lin, Lei Ma, and Yang Liu.
+\newblock Vultron: catching vulnerable smart contracts once and for all.
+\newblock In \emph{Proceedings of the 41st International Conference on Software
+  Engineering: New Ideas and Emerging Results}, pages 1--4. IEEE Press, 2019.
+
+\bibitem[Eth(2020)]{Etherscan}
+Etherscan.
+\newblock \url{https://etherscan.io}, 2020.
+
+\bibitem[Bartoletti et~al.(2020)Bartoletti, Carta, Cimoli, and
+  Saia]{BARTOLETTI2020259}
+Massimo Bartoletti, Salvatore Carta, Tiziana Cimoli, and Roberto Saia.
+\newblock Dissecting ponzi schemes on ethereum: Identification, analysis, and
+  impact.
+\newblock \emph{Future Generation Computer Systems}, 102:\penalty0 259 -- 277,
+  2020.
+\newblock ISSN 0167-739X.
+\newblock \doi{https://doi.org/10.1016/j.future.2019.08.014}.
+\newblock URL \url{http://www.sciencedirect.com/science/article/pii/
+  S0167739X18301407}.
+
+\bibitem[Wu et~al.(2018)Wu, Chen, Wang, Li, Wang, and Luo]{wu2018cream}
+Shuangke Wu, Yanjiao Chen, Qian Wang, Minghui Li, Cong Wang, and Xiangyang Luo.
+\newblock Cream: a smart contract enabled collusion-resistant e-auction.
+\newblock \emph{IEEE Transactions on Information Forensics and Security},
+  14\penalty0 (7):\penalty0 1687--1701, 2018.
+
+\bibitem[Jackson(2014)]{jackson2014mechanism}
+Matthew~O Jackson.
+\newblock Mechanism theory.
+\newblock \emph{Available at SSRN 2542983}, 2014.
+
+\bibitem[Nisan and Ronen(2001)]{nisan2001algorithmic}
+Noam Nisan and Amir Ronen.
+\newblock Algorithmic mechanism design.
+\newblock \emph{Games and Economic behavior}, 35\penalty0 (1-2):\penalty0
+  166--196, 2001.
+
+\bibitem[King(1976)]{king1976symbolic}
+James~C King.
+\newblock Symbolic execution and program testing.
+\newblock \emph{Communications of the ACM}, 19\penalty0 (7):\penalty0 385--394,
+  1976.
+
+\bibitem[Solidity()]{solidity}
+Solidity.
+\newblock {Solidity}.
+\newblock \url{https://solidity.readthedocs.io/en/v0.5.1/}, 2018.
+
+\bibitem[Jenamani et~al.(2007)Jenamani, Zhong, and
+  Bhargava]{jenamani2007cheating}
+Mamata Jenamani, Yuhui Zhong, and Bharat Bhargava.
+\newblock Cheating in online auction--towards explaining the popularity of
+  english auction.
+\newblock \emph{Electronic Commerce Research and Applications}, 6\penalty0
+  (1):\penalty0 53--62, 2007.
+
+\bibitem[Leino(2010)]{dafny}
+K.~Rustan~M. Leino.
+\newblock Dafny: An automatic program verifier for functional correctness.
+\newblock In \emph{Proceedings of the 16th International Conference on Logic
+  for Programming, Artificial Intelligence, and Reasoning}, LPAR'10, pages
+  348--370, Berlin, Heidelberg, 2010. Springer-Verlag.
+\newblock ISBN 3642175104.
+
+\bibitem[erc(2020{\natexlab{a}})]{erc-1202}
+Eip-1202: Voting standard.
+\newblock \url{https://eips.ethereum.org/EIPS/eip-1202}, 2020{\natexlab{a}}.
+
+\bibitem[erc(2020{\natexlab{b}})]{erc-1815}
+Interface for blind auctions (draft).
+\newblock \url{https://github.com/ethereum/EIPs/pull/1815}, 2020{\natexlab{b}}.
+
+\bibitem[Dijkstra and Scholten(1990)]{DS90}
+Edsger~W. Dijkstra and Carel~S. Scholten.
+\newblock Predicate calculus and program semantics.
+\newblock \emph{Texts and Monographs in Computer Science}, 1990.
+
+\end{thebibliography}

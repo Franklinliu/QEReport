@@ -1,0 +1,380 @@
+%%% macros.tex
+%%% Import packages, define utility commands and define macros
+%%% Version 1.1.0
+
+%%%----------
+%%% Imports
+
+%%% Text Formatting
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem} % normalem do not replace \emph to underline
+%\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyphenat}
+%%% Reference, Citation and Link
+%\usepackage[hyphens]{url}
+%\usepackage{url}
+%\usepackage[hidelinks]{hyperref}
+%\usepackage[hyphens]{url}
+\usepackage[anythingbreaks]{breakurl}
+%\usepackage{cite}
+
+%%% Tables
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{ragged2e}
+\usepackage{longtable}
+\usepackage{diagbox}
+%%% Plots
+\usepackage{caption}
+% \usepackage{subcaption}
+\usepackage{subfloat}
+% \usepackage{subfig}
+\usepackage[caption=false]{subfig}
+\usepackage{wrapfig}
+% Code
+\usepackage{listings}
+
+%\usepackage[margin=25mm, a4paper, showframe]{geometry}
+\usepackage[many]{tcolorbox}
+\usepackage{lipsum}
+
+% Proof
+\usepackage{bussproofs}
+\usepackage{stackengine}
+
+% Tikz Figs
+\usepackage{pifont}
+\usepackage{tikz}
+%\usepackage{pgf-umlsd} % for flow diagram
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shadows}
+%\usetikzlibrary{shapes}
+
+%%% Miscellaneous
+\usepackage{balance}
+%\usepackage{flushend} % balance the end of double column document
+\usepackage{datetime} % for getting current date time
+
+\usepackage[capitalize]{cleveref}
+\crefname{section}{Sect.}{Sects.}
+\Crefname{section}{Section}{Sections}
+
+%%%----------
+%%% Utility Commands
+%\renewcommand\footnotetextcopyrightpermission[1]{}
+%\settopmatter{printacmref=false}
+
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\setlength{\abovecaptionskip}{5pt}
+\setlength{\belowcaptionskip}{5pt}
+\setlength{\textfloatsep}{5pt}
+\setlength{\floatsep}{5pt}
+\setlength{\intextsep}{5pt}
+\setlength{\dbltextfloatsep}{5pt}
+\setlength{\dblfloatsep}{5pt}
+
+\newcommand{\XSpace}[1]{}
+\newcommand{\XComment}[1]{}
+\newcommand{\yi}[1]{\textcolor{purple}{Yi: #1}}
+\newcommand{\liu}[1]{\textcolor{red}{Liu Ye: #1}}
+\newcommand{\lsw}[1]{\textcolor{blue}{Shang-Wei: #1}}
+\newcommand{\xh}[1]{\textcolor{cyan}{#1}}
+\newcommand{\pn}[1]{\textcolor{blue}{PN: #1}}
+\newcommand{\Fix}[1]{\textcolor{red}{#1}}
+\newcommand{\Blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\EditAdd}[1]{\textcolor{green}{[#1]}}
+\newcommand{\EditRm}[1]{\textcolor{red}{[\sout{#1}]}}
+\newcommand{\EditMod}[2]{\textcolor{red}{[\sout{#1}]}\textcolor{green}{[#2]}}
+\newcommand{\DefMacro}[2]{\expandafter\newcommand\csname rmk-#1\endcsname{#2}}
+\newcommand{\UseMacro}[1]{\csname rmk-#1\endcsname}
+
+\newcommand{\CZComment}[1]{\Fix{#1}}
+
+\renewcommand{\paragraph}[1]{\vskip 0.05in \noindent\textbf{#1.}}
+\newcommand{\MyParaOnly}[1]{\noindent\textbf{#1}}
+\newcommand{\Answer}[1]{\subsection{#1}}
+\newcommand{\reducedstrut}{\vrule width 0pt height .9\ht\strutbox depth .9\dp\strutbox\relax}
+\newcommand{\InputWithSpace}[1]{\bgroup\def\arraystretch{1.1}\input{#1}\egroup}
+\newcommand{\Code}[1]{{\ifmmode{\mathtt{#1}}\else$\mathtt{#1}$\fi}}
+\newcommand{\CodeIn}[1]{{\ifmmode{\mathtt{#1}}\else$\mathtt{#1}$\fi}}
+\newcommand{\ColorBack}[1]{%
+  \begingroup
+  \setlength{\fboxsep}{0pt}%
+  \colorbox{purple!20}{\reducedstrut#1\/}%
+  \endgroup
+}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\tool}{\textsc{FairCon}\xspace}
+\newcommand{\faircon}{\textsc{FairCon}\xspace}
+\newcommand{\modcon}{\textsc{ModCon}\xspace}
+\newcommand{\infcon}{\textsc{InfCon}\xspace}
+\newcommand\overhead[2]{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily
+$#2$}}}{#1}}}
+\newcommand{\mand}{\texttt{\textbf{ and }}\xspace}
+\newcommand{\mnot}{\texttt{\textbf{not }}\xspace}
+\newcommand{\mtrue}{\texttt{\textbf{true }}\xspace}
+\newcommand{\report}{\ensuremath{\hat{\theta}}\xspace}
+
+
+%% \newcommand{\historyslicing}{history slicing\xspace}
+%% \newcommand{\historyslice}{history slice\xspace}
+%% \newcommand{\historyslices}{history slices\xspace}
+%% \newcommand{\changehistory}{change history\xspace}
+%% \newcommand{\ChangeHistory}{Change History\xspace}
+%% \newcommand{\Changehistory}{Change history\xspace}
+%% \newcommand{\changehistories}{change histories\xspace}
+%% \newcommand{\ChangeHistories}{Change Histories\xspace}
+%% \newcommand{\svh}{software change history\xspace}
+%% \newcommand{\schangehistory}{software change history\xspace}
+%% \newcommand{\schangehistories}{software change histories\xspace}
+%% \newcommand{\svhs}{software change histories\xspace}
+%% \newcommand{\Svhs}{Software change histories\xspace}
+%% \newcommand{\Schangehistories}{Software change histories\xspace}
+
+%% \newcommand{\subseq}{\vartriangleleft}
+%% \newcommand{\pfun}{\mathrel{\ooalign{\hfil$\mapstochar\mkern5mu$\hfil\cr$\to$\cr}}}
+%% \newcommand{\nat}{\mathbb{N}\xspace}
+%% \newcommand{\tline}[1]{\textsc{Text}\ensuremath{(#1)}\xspace}
+%% \newcommand{\astree}[1]{\textsc{Ast}\ensuremath{(#1)}\xspace}
+%% \newcommand{\troot}[1]{\textsc{Root}\ensuremath{(#1)}\xspace}
+%% \newcommand{\parent}[1]{\textsc{Parent}\ensuremath{(#1)}\xspace}
+%% \newcommand{\leaf}[1]{\textsc{Leaf}\ensuremath{(#1)}\xspace}
+
+%% \newcommand{\fields}[1]{\textsc{Fields}\ensuremath{(#1)}\xspace}
+%% \newcommand{\methods}[1]{\textsc{Methods}\ensuremath{(#1)}\xspace}
+%% \newcommand{\subtype}{\ensuremath{<:}}
+%% \newcommand{\emptyseq}{\ensuremath{\langle\rangle}\xspace}
+
+%% \DeclareRobustCommand{\lset}[1]{\ifthenelse{\equal{#1}{}}{\ensuremath{\Delta}}%
+%%   {\ensuremath{\Delta(#1)}\xspace}}
+%% \DeclareRobustCommand{\tset}[1]{\ifthenelse{\equal{#1}{}}{\ensuremath{\hat{\Delta}}}%
+%%   {\ensuremath{\hat{\Delta}(#1)}\xspace}}
+
+%% \DeclareRobustCommand{\ledit}[1]{\ifthenelse{\equal{#1}{}}%
+%%   {\ensuremath{\delta}\xspace}%
+%%   {\ensuremath{\delta(#1)}\xspace}}
+
+%% \DeclareRobustCommand{\tedit}[1]{\ifthenelse{\equal{#1}{}}%
+%%   {\ensuremath{\hat{\delta}}\xspace}%
+%%   {\ensuremath{\hat{\delta}(#1)}\xspace}}
+
+%% \newcommand{\ins}[1]{\ifthenelse{\equal{#1}{}}{\textsc{Ins}\xspace}%
+%%   {\textsc{Ins}\ensuremath{(#1)}\xspace}}
+%% \newcommand{\del}[1]{\ifthenelse{\equal{#1}{}}{\textsc{Del}\xspace}%
+%%   {\textsc{Del}\ensuremath{(#1)}\xspace}}
+%% %\newcommand{\mov}[1]{\textsc{Mov}\ensuremath{(#1)}\xspace}
+%% \newcommand{\upd}[1]{\ifthenelse{\equal{#1}{}}{\textsc{Upd}\xspace}%
+%%   {\textsc{Upd}\ensuremath{(#1)}\xspace}}
+
+%% \newcommand{\INS}[1]{\ifthenelse{\equal{#1}{}}{\textsc{Ins}\xspace}%
+%%   {\textsc{Ins}\texttt{(#1)}\xspace}}
+%% \newcommand{\DEL}[1]{\ifthenelse{\equal{#1}{}}{\textsc{Del}\xspace}%
+%%   {\textsc{Del}\texttt{(#1)}\xspace}}
+%% \newcommand{\UPD}[1]{\ifthenelse{\equal{#1}{}}{\textsc{Upd}\xspace}%
+%%   {\textsc{Upd}\texttt{(#1)}\xspace}}
+
+%% \newcommand{\val}[1]{\ifthenelse{\equal{#1}{}}{\ensuremath{\nu}}%
+%%   {\ensuremath{\nu(#1)}}\xspace}
+%% \newcommand{\ide}[1]{\ifthenelse{\equal{#1}{}}{\ensuremath{id}}%
+%%   {\ensuremath{id(#1)}}\xspace}
+%% \newcommand{\lab}[1]{\ifthenelse{\equal{#1}{}}{\ensuremath{\iota}}%
+%%   {\ensuremath{\iota(#1)}}\xspace}
+
+\definecolor{silver}{RGB}{192,192,192}
+\newcommand{\HighlightCode}[1]{\hspace{-3pt}\colorbox{silver}{#1\vphantom{-}}}
+
+% for table headers
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+%\input{defs-logic} % for logic symbols
+%\input{defs-code} % for code listings
+
+% for including revision info in the document
+\newcommand{\RevisionInfo}{\Fix{Time: \today{} at \currenttime{.}}}
+
+
+%%%----------
+%%% Macros
+%\newcommand{\UPPERCASE}{Title Case\xspace}
+%\newcommand{\Firstcap}{First cap\xspace}
+%\newcommand{\lowercase}{lower case\xspace}
+
+\newcommand{\MCr}{Maven Central repository\xspace}
+\newcommand{\MCR}{Maven Central Repository\xspace}
+\newcommand{\github}{GitHub\xspace}
+%\newcommand{\stackoverflow}{StackOverflow\xspace}
+
+\newcommand{\df}{differential fact\xspace}
+\newcommand{\dfs}{differential facts\xspace}
+\newcommand{\old}{original\xspace}
+\newcommand{\new}{upgraded\xspace}
+\newcommand{\Old}{Original\xspace}
+\newcommand{\New}{Upgraded\xspace}
+\newcommand{\grok}{Grok\xspace}
+\newcommand{\evosuite}{\textsc{EvoSuite}\xspace}
+\newcommand{\lib}{library\xspace}
+\newcommand{\Lib}{Library\xspace}
+\newcommand{\client}{client\xspace}
+\newcommand{\Client}{Client\xspace}
+\newcommand{\difffacts}{inter-version facts\xspace}
+\newcommand{\depsfacts}{intra-version facts\xspace}
+\newcommand{\cslicer}{\textsc{CSlicer}\xspace}
+\newcommand{\definer}{\textsc{Definer}\xspace}
+\newcommand{\clltuple}{$\langle cli,$\allowbreak$lib,$\allowbreak$lib'\rangle$\xspace}
+\newcommand{\bcel}{Apache BCEL\xspace}
+\newcommand{\compatibilitytesting}{upgrade compatibility checking\xspace}
+\newcommand{\CompatibilityTesting}{Upgrade Compatibility Checking\xspace}
+\newcommand{\oldlibsym}{$lib$\xspace}
+\newcommand{\newlibsym}{$lib'$\xspace}
+\newcommand{\clientsym}{$cli$\xspace}
+
+\newcommand{\NumOfSlicingSubjects}{10\xspace}
+\newcommand{\dosc}{\textsc{DoSC}\xspace}
+\newcommand{\setoftests}{set of tests\xspace}
+\newcommand{\NumOfSlicingProjects}{eight\xspace}
+
+\newcommand{\NumOfSubjectsInRTSDataset}{408\xspace}
+\newcommand{\NumOfCompatSubjects}{ten\xspace}
+\newcommand{\NumOfSubjectsHaveCompatIssues}{four\xspace}
+\newcommand{\NumOfSubjectsNotHaveCompatIssues}{six\xspace}
+\newcommand{\MaxReduce}{99.11\%\xspace}
+\newcommand{\MinReduce}{27.37\%\xspace}
+\DefMacro{NumOfSubjectsReduceOver90Percent}{seven}
+
+%% Tables
+%Symbols for relations
+\newcommand{\rCov}{\ensuremath{\mathit{Cov}}\xspace}
+\newcommand{\rIns}{\ensuremath{\mathit{Ins}}\xspace}
+\newcommand{\rUpd}{\ensuremath{\mathit{Upd}}\xspace}
+\newcommand{\rDel}{\ensuremath{\mathit{Del}}\xspace}
+\newcommand{\rCall}{\ensuremath{\mathit{Call}}\xspace}
+\newcommand{\rRef}{\ensuremath{\mathit{Ref}}\xspace}
+\newcommand{\rContain}{\ensuremath{\mathit{Contain}}\xspace}
+\newcommand{\rParent}{\ensuremath{\mathit{Parent}}\xspace}
+\newcommand{\rHunk}{\ensuremath{\mathit{Hunk}}\xspace}
+\newcommand{\rCmt}{\ensuremath{\mathit{Cmt}}\xspace}
+
+% Compat Subjects Table
+\newcommand{\TableCaptionCompatSubjects}{Subjects of \CompatibilityTesting Experiment (All URLs Start with https://github.com/)\label{tab:compat:subjects}}
+\newcommand{\TableHeadSubjectId}{\textbf{ID}}
+\newcommand{\TableHeadClient}{\textbf{Client}}
+\newcommand{\TableHeadLib}{\textbf{Library}}
+\newcommand{\TableHeadSHA}{\textbf{SHA}}
+\newcommand{\TableHeadURL}{\textbf{URL}}
+\newcommand{\TableHeadLibOldVer}{\textbf{$Lib$ Version}}
+\newcommand{\TableHeadLibNewVer}{\textbf{$Lib'$ Version}}
+
+% Compat Results Table
+%% \newcommand{\TableCaptionCompatResults}{Results of Compatibility Testing Experiment (\#CC=the Number of Client Classes; \#QC=the Number of Client Classes Influenced by the Upgrade, obtained by querying Factbase; \%Red=Reduction Rate=(\#CC-\#QC)/\#CC; \#T=the Number of Generated Test Classes; \#FT=the Number of Generated Test Classes that Flip from Pass to Fail after \Lib Upgrade)\label{tab:compat:results}}
+\newcommand{\TableCaptionCompatResults}{Results of \CompatibilityTesting Experiment\label{tab:compat:results}}
+\newcommand{\TableHeadNumOfAllClasses}{\textbf{\#CC}}
+\newcommand{\TableHeadNumOfAffectedClasses}{\textbf{\#AC}}
+\newcommand{\TableHeadReduction}{\textbf{\%Reduction}}
+\newcommand{\TableHeadNumOfGeneratedTestClasses}{\textbf{\#T}}
+\newcommand{\TableHeadNumOfFailedTestClasses}{\textbf{\#FT}}
+
+%% Numbers
+
+%\input{tables/icse2020-compat-subjects-numbers}
+%\input{tables/icse2020-compat-result-numbers}
+
+%%%----------
+%%% Package settings
+
+% code listing style
+\lstdefinestyle{tafile}{%
+    basicstyle=\scriptsize\ttfamily,
+    %basicstyle=\large,
+    frame=single,
+    rulecolor=\color{black},
+    morekeywords={\$INHERIT, Update, Insert, Delete, reference, contain, call, HunkDep, Coverage},
+    tabsize=2,
+    numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    stepnumber=1,
+    numberstyle=\tiny\color{gray},   % the style that is used for the line-numbers
+    keywordstyle=\sffamily,
+}
+
+\lstdefinestyle{syntax}{%
+    basicstyle=\small\ttfamily,
+    backgroundcolor=\color{white},
+    escapeinside={(*}{*)},
+    frame=none,
+    morekeywords={,id,bid,valuation,allocation,price,max,argmax,}
+    tabsize=2,
+    numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
+    keywordstyle=\bfseries\color{black}\sffamily,
+}
+%%% rq box
+\newtcolorbox{rqbox}[1]{%
+    tikznode boxed title,
+    enhanced,
+    arc=0mm,
+    boxrule=0.5pt,
+    interior style={white},
+    attach boxed title to top center= {yshift=-\tcboxedtitleheight/2},
+    colbacktitle=white,coltitle=black,
+    boxed title style={size=normal,colframe=white,boxrule=0pt},
+    title=\textbf{Answer to }{\textbf{#1}}}
+\newcommand{\prefer}{\vartriangle}
+\newcommand{\announce}{\triangledown}
+\newcommand{\join}{\oplus}
+\newcommand{\associate}{\barwedge}
+\newcommand{\reduce}{ \mapsto}
+\newcommand{\fourspace}{\xspace\xspace\xspace\xspace}
+\newcommand{\twospace}{\xspace\xspace}
+\newcommand{\terminate}{\Gamma}
+\newcommand{\expand}{::=}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Octon}{\mathbb{O}}
+\newcommand{\Z}{\mathbb{Z}}
+%\hypersetup{draft}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\usepackage{alphabeta}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+%\usepackage[group-separator={,}]{siunitx}

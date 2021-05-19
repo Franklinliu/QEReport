@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+The style file: unsrtnat.bst
+Database file #1: bibexport.bib
+Warning--empty journal in nakamoto2008bitcoin
+You've used 26 entries,
+            2481 wiz_defined-function locations,
+            694 strings with 8025 characters,
+and the built_in function-call counts, 7988 in all, are:
+= -- 739
+> -- 235
+< -- 13
++ -- 121
+- -- 68
+* -- 511
+:= -- 1134
+add.period$ -- 78
+call.type$ -- 26
+change.case$ -- 48
+chr.to.int$ -- 25
+cite$ -- 35
+duplicate$ -- 465
+empty$ -- 869
+format.name$ -- 88
+if$ -- 1794
+int.to.chr$ -- 2
+int.to.str$ -- 27
+missing$ -- 13
+newline$ -- 135
+num.names$ -- 45
+pop$ -- 254
+preamble$ -- 1
+purify$ -- 26
+quote$ -- 0
+skip$ -- 305
+stack$ -- 0
+substring$ -- 285
+swap$ -- 82
+text.length$ -- 3
+text.prefix$ -- 2
+top$ -- 0
+type$ -- 182
+warning$ -- 1
+while$ -- 50
+width$ -- 0
+write$ -- 326
+(There was 1 warning)
