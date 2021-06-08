@@ -34,7 +34,7 @@
 % \usepackage{subcaption}
 \usepackage{subfloat}
 % \usepackage{subfig}
-\usepackage[caption=false]{subfig}
+%\usepackage[caption=false]{subfig}
 \usepackage{wrapfig}
 % Code
 \usepackage{listings}
@@ -116,10 +116,10 @@
 }
 
 \DeclareMathOperator*{\argmax}{arg\,max}
-\newcommand{\tool}{\textsc{FairCon}\xspace}
+%\newcommand{\tool}{\textsc{FairCon}\xspace}
 \newcommand{\faircon}{\textsc{FairCon}\xspace}
 \newcommand{\modcon}{\textsc{ModCon}\xspace}
-\newcommand{\infcon}{\textsc{InfCon}\xspace}
+\newcommand{\spcon}{\textsc{SpCon}\xspace}
 \newcommand\overhead[2]{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily
 $#2$}}}{#1}}}
 \newcommand{\mand}{\texttt{\textbf{ and }}\xspace}
@@ -378,3 +378,17 @@ $#2$}}}{#1}}}
 \usepackage{alphabeta}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 %\usepackage[group-separator={,}]{siunitx}
+
+%
+%	ModCon Macros
+%
+\usepackage{caption}
+\usepackage{subcaption}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\modconurl}{https://sites.google.com/view/modcon}
+\newcommand{\cfg}{control flow graph\xspace}
+\newcommand{\company}{WeBank\xspace}
+\newcommand{\wecredit}{CMA\xspace}
+
+%  FairCon Macros
+\usepackage{siunitx}

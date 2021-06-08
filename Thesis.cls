@@ -209,7 +209,7 @@
 
 %Your thesis title - this is used in the title and abstract
 %-------------------------------------------------
-\thesistitle{Towards Smart Contract Fairness Verification, Access Control and Model-Based Testing} %
+\thesistitle{Towards Smart Contract Fairness Verification, Model-Based Testing and User Permission Analysis} %
 %-------------------------------------------------
 \supervisor{Asst Prof. Li Yi \textsc{XXX}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------
@@ -276,16 +276,24 @@
   \begin{center}
   \setstretch{2}
   \vfill
-  \textbf{\LARGE \newline \rule{\linewidth}{2pt}\\\vspace{-7pt}\ttitle\\\rule{\linewidth}{2pt}}\\% Thesis title
+%  \textbf{\LARGE \newline \rule{\linewidth}{2pt}\\\vspace{-7pt}\ttitle\\\rule{\linewidth}{2pt}}\\% Thesis title
+  \textbf{\LARGE \ttitle }\\% Thesis title
   % \setstretch{1.5}
   \vfill
-  \href{http://www.ntu.edu.sg}{\includegraphics[width=230pt]{Styles/ntu_logo}}\\%[2cm]
+%  \href{http://www.ntu.edu.sg}{\includegraphics[width=230pt]{Styles/ntu_logo}}\\%[2cm]
+	\begin{figure}
+		\begin{center}
+			\def\svgwidth{0.75\columnwidth} 
+			\input{NTULogo.pdf_tex}
+		\end{center}
+	\end{figure}
   \vfill
   \textbf{\Large \authornames}\\%[1.2cm]
   {\large \deptname}\\%[1.2cm] % University name
   \vfill
   \setstretch{1.2}
-  \large A thesis submitted to the Nanyang Technological University \\ in partial fulfillment of the requirements for the degree of\\ \degreename\\[1cm] % University requirement text
+ 
+  \large Qualifying Examination Report Submitted to the Nanyang Technological University \\ for the Confirmation for Admission to the Degree of\\ \degreename\\[1cm] % University
   {\large\bf \the\year}\\[2cm] % Date
   \end{center}
   \end{titlepage}
@@ -310,7 +318,7 @@
 			{\large \textbf{\deptname}}\\%[1.2cm] % University name
 			[1.2cm]
 			\setstretch{1.2}
-			\large A thesis submitted to the Nanyang Technological University \\ in partial fulfillment of the requirements for the degree of\\ \degreename\\[1cm] % University requirement text
+			 \large A thesis submitted to the Nanyang Technological University \\ in partial fulfillment of the requirements for the degree of\\ \degreename\\[1cm] % University requirement text
 			{\large\bf \the\year}\\[2cm] % Date
 		\end{center}
 	\end{titlepage}

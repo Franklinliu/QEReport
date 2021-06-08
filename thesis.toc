@@ -1,0 +1,42 @@
+\contentsline {chapter}{Abstract}{iii}{dummy.1}%
+\vspace {0.8em}
+\contentsline {chapter}{List of Figures}{vii}{dummy.2}%
+\contentsline {chapter}{List of Tables}{ix}{dummy.3}%
+\contentsline {chapter}{List of Author's Publications}{xi}{dummy.4}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motivation and Challenge}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Main Work and Contribution}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Organizations}{4}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Preliminary}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Toward Automated Verification of Smart Contract Fairness}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}\textsc {FairCon}\xspace by Example}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The Analysis Framework for Smart Contract Fairness}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Smart Contracts as Mechanism Models}{16}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Fairness Properties}{17}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Mechanism Modeling Language}{19}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}The \textsc {FairCon}\xspace Framework}{21}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Mechanism Model Extraction}{22}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Bounded Property Checking}{23}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Formal Proof for Unbounded Model}{24}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Implementation and Evaluation}{26}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Experiment Setup}{26}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Experiment Results}{28}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Threats to Validity}{34}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Related Work}{34}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Smart Contract Analysis and Verification}{34}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Fairness Checking in Software Systems}{36}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Mechanism Design and Game Theory}{36}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}Conclusion and Future Work}{37}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Model-Based Testing Platform for Smart Contract}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{39}{section.4.1}%
+\contentsline {section}{\numberline {4.2}\textsc {ModCon}\xspace Overview}{43}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}User Interface}{43}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Back-End Implementation}{45}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Evaluation}{47}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Related Work}{48}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Conclusion}{49}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Future Work}{51}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{55}{chapter.6}%
+\vspace {0.8em}
+\contentsline {chapter}{Bibliography}{57}{dummy.5}%

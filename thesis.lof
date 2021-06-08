@@ -1,0 +1,23 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The smart contract transaction on Ethereum.\relax }}{6}{figure.caption.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The CryptoRomeAuction Solidity source code.\relax }}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The mechanism model of CryptoRomeAuction with three bidders.\relax }}{15}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Syntax of the auction/voting mechanism model.\relax }}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Semantic rules of the auction/voting model.\relax }}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Workflow of the \textsc {FairCon}\xspace framework.\relax }}{20}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The harness program for mechanism model orchestration.\relax }}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The EtherAuction Solidity source code.\relax }}{30}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Model extraction time with increasing number of bidders.\relax }}{31}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Property checking time with increasing number of bidders.\relax }}{31}{figure.caption.32}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Illustration of a CMA\xspace smart contract at WeBank\xspace .\relax }}{41}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of \textsc {ModCon}\xspace .\relax }}{42}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Smart contract deployment and setup.\relax }}{43}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces User-configured model specification.\relax }}{44}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Test generation control panel.\relax }}{45}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces State and transition coverage achieved per test for CMA\xspace and \texttt {BlindAuction}.\relax }}{47}{figure.caption.38}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Illustration of the time-travel-based security policy validation.\relax }}{52}{figure.caption.39}%
+\addvspace {10\p@ }

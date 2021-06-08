@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{76}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -38,14 +38,14 @@ Dapp statistics.
 \bibitem[Siegel(2016)]{DAO_attacks}
 David Siegel.
 \newblock \emph{Understanding the DAO Attack}, 2016.
-\newblock URL \url{https://www.coindesk.com/understanding-dao-hack-
-  journalists}.
+\newblock URL
+  \url{https://www.coindesk.com/understanding-dao-hack-journalists}.
 
 \bibitem[PeckShield(2019)]{EOS_attacks}
 PeckShield.
 \newblock \emph{EOS: Transaction Congestion Attack}, 2019.
-\newblock URL \url{https://medium.com/@peckshield/eos-transaction-congestion-
-  attack-attackers-could-paralyze-eos-network-with-minimal- cost-9adfb4d16c82}.
+\newblock URL
+  \url{https://medium.com/@peckshield/eos-transaction-congestion-attack-attackers-could-paralyze-eos-network-with-minimal-cost-9adfb4d16c82}.
 
 \bibitem[gas(2020)]{gas-fee}
 Ethereum transaction fees fall by 75\% as congestion eases.
@@ -74,11 +74,13 @@ Oyente.
 \newblock SmartDec, 2019.
 \newblock URL \url{https://tool.smartdec.net}.
 
-\bibitem[Wang et~al.(2019)Wang, Li, Lin, Ma, and Liu]{wang2019vultron}
+\bibitem[Wang et~al.(2019{\natexlab{a}})Wang, Li, Lin, Ma, and
+  Liu]{wang2019vultron}
 Haijun Wang, Yi~Li, Shang-Wei Lin, Lei Ma, and Yang Liu.
 \newblock Vultron: catching vulnerable smart contracts once and for all.
 \newblock In \emph{Proceedings of the 41st International Conference on Software
-  Engineering: New Ideas and Emerging Results}, pages 1--4. IEEE Press, 2019.
+  Engineering: New Ideas and Emerging Results}, pages 1--4. IEEE Press,
+  2019{\natexlab{a}}.
 
 \bibitem[Eth(2020)]{Etherscan}
 Etherscan.
@@ -93,8 +95,8 @@ Massimo Bartoletti, Salvatore Carta, Tiziana Cimoli, and Roberto Saia.
   2020.
 \newblock ISSN 0167-739X.
 \newblock \doi{https://doi.org/10.1016/j.future.2019.08.014}.
-\newblock URL \url{http://www.sciencedirect.com/science/article/pii/
-  S0167739X18301407}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0167739X18301407}.
 
 \bibitem[Wu et~al.(2018)Wu, Chen, Wang, Li, Wang, and Luo]{wu2018cream}
 Shuangke Wu, Yanjiao Chen, Qian Wang, Minghui Li, Cong Wang, and Xiangyang Luo.
@@ -152,5 +154,336 @@ Interface for blind auctions (draft).
 Edsger~W. Dijkstra and Carel~S. Scholten.
 \newblock Predicate calculus and program semantics.
 \newblock \emph{Texts and Monographs in Computer Science}, 1990.
+
+\bibitem[Tolmach et~al.(2020)Tolmach, Li, Lin, Liu, and Li]{tolmach2020survey}
+Palina Tolmach, Yi~Li, Shang-Wei Lin, Yang Liu, and Zengxiang Li.
+\newblock A survey of smart contract formal specification and verification,
+  2020.
+
+\bibitem[Grishchenko et~al.(2018)Grishchenko, Maffei, and
+  Schneidewind]{grishchenko2018semantic}
+Ilya Grishchenko, Matteo Maffei, and Clara Schneidewind.
+\newblock A semantic framework for the security analysis of ethereum smart
+  contracts.
+\newblock In \emph{International Conference on Principles of Security and
+  Trust}, pages 243--269. Springer, 2018.
+
+\bibitem[Perez and Livshits(2019)]{Perez2019}
+Daniel Perez and Benjamin Livshits.
+\newblock Smart contract vulnerabilities: Does anyone care?
+\newblock feb 2019.
+\newblock URL \url{http://arxiv.org/abs/1902.06710}.
+
+\bibitem[Wang et~al.(2019{\natexlab{b}})Wang, Zhang, and Su]{Wang2019payment}
+Shuai Wang, Chengyu Zhang, and Zhendong Su.
+\newblock Detecting nondeterministic payment bugs in ethereum smart contracts.
+\newblock \emph{Proc. ACM Program. Lang.}, 3\penalty0 (OOPSLA), October
+  2019{\natexlab{b}}.
+\newblock \doi{10.1145/3360615}.
+\newblock URL \url{https://doi.org/10.1145/3360615}.
+
+\bibitem[Luu et~al.(2016)Luu, Chu, Olickel, Saxena, and Hobor]{luu2016making}
+Loi Luu, Duc-Hiep Chu, Hrishi Olickel, Prateek Saxena, and Aquinas Hobor.
+\newblock Making smart contracts smarter.
+\newblock In \emph{Proceedings of the 2016 ACM SIGSAC conference on computer
+  and communications security}, pages 254--269. ACM, 2016.
+
+\bibitem[Nikoli{\'c} et~al.(2018)Nikoli{\'c}, Kolluri, Sergey, Saxena, and
+  Hobor]{nikolic2018finding}
+Ivica Nikoli{\'c}, Aashish Kolluri, Ilya Sergey, Prateek Saxena, and Aquinas
+  Hobor.
+\newblock Finding the greedy, prodigal, and suicidal contracts at scale.
+\newblock In \emph{Proceedings of the 34th Annual Computer Security
+  Applications Conference}, pages 653--663. ACM, 2018.
+
+\bibitem[So et~al.(2020)So, Lee, Park, Lee, and Oh]{So2019}
+Sunbeom So, Myungho Lee, Jisu Park, Heejo Lee, and Hakjoo Oh.
+\newblock {VeriSmart}: A highly precise safety verifier for {Ethereum} smart
+  contracts.
+\newblock In \emph{2020 IEEE Symposium on Security and Privacy (SP)}, pages
+  825--841. IEEE Computer Society, may 2020.
+
+\bibitem[Feng et~al.(2019)Feng, Torlak, and Bodik]{feng2019precise}
+Yu~Feng, Emina Torlak, and Rastislav Bodik.
+\newblock {Precise Attack Synthesis for Smart Contracts}.
+\newblock \emph{arXiv preprint arXiv:1902.06067}, 2019.
+
+\bibitem[Chen et~al.(2017)Chen, Li, Luo, and Zhang]{Chen2017}
+Ting Chen, Xiaoqi Li, Xiapu Luo, and Xiaosong Zhang.
+\newblock Under-optimized smart contracts devour your money.
+\newblock In \emph{Proceedings of the 2017 IEEE 24th International Conference
+  on Software Analysis, Evolution and Reengineering}, pages 442--446, Feb 2017.
+\newblock \doi{10.1109/SANER.2017.7884650}.
+
+\bibitem[Grech et~al.(2018)Grech, Kong, Jurisevic, Brent, Scholz, and
+  Smaragdakis]{grech2018madmax}
+Neville Grech, Michael Kong, Anton Jurisevic, Lexi Brent, Bernhard Scholz, and
+  Yannis Smaragdakis.
+\newblock Madmax: Surviving out-of-gas conditions in ethereum smart contracts.
+\newblock \emph{Proceedings of the ACM on Programming Languages}, page 116,
+  2018.
+
+\bibitem[Ellul and Pace(2018)]{ellul2018runtime}
+Joshua Ellul and Gordon~J Pace.
+\newblock Runtime verification of ethereum smart contracts.
+\newblock In \emph{2018 14th European Dependable Computing Conference (EDCC)},
+  pages 158--163. IEEE, 2018.
+
+\bibitem[myt(2019)]{mythril}
+{Mythril}.
+\newblock \url{https://github.com/ConsenSys/mythril}, 2019.
+\newblock A Security Analysis Tool for EVM Bytecode.
+
+\bibitem[Kalra et~al.(2018)Kalra, Goel, Dhawan, and Sharma]{kalra2018zeus}
+Sukrit Kalra, Seep Goel, Mohan Dhawan, and Subodh Sharma.
+\newblock {ZEUS}: Analyzing safety of smart contracts.
+\newblock In \emph{The Network and Distributed System Security Symposium},
+  2018.
+
+\bibitem[Tsankov et~al.(2018)Tsankov, Dan, Drachsler-Cohen, Gervais, Buenzli,
+  and Vechev]{tsankov2018securify}
+Petar Tsankov, Andrei Dan, Dana Drachsler-Cohen, Arthur Gervais, Florian
+  Buenzli, and Martin Vechev.
+\newblock Securify: Practical security analysis of smart contracts.
+\newblock In \emph{Proceedings of the 2018 ACM SIGSAC Conference on Computer
+  and Communications Security}, pages 67--82. ACM, 2018.
+
+\bibitem[Chang et~al.(2018)Chang, Gao, Xiao, Sun, and Yang]{chang2018scompile}
+Jialiang Chang, Bo~Gao, Hao Xiao, Jun Sun, and Zijiang Yang.
+\newblock scompile: Critical path identification and analysis for smart
+  contracts.
+\newblock \emph{arXiv preprint arXiv:1808.00624}, 2018.
+
+\bibitem[Wang et~al.(2019{\natexlab{c}})Wang, Li, Lin, Artho, Ma, and
+  Liu]{Wang2019b}
+Haijun Wang, Yi~Li, Shang-Wei Lin, Cyrille Artho, Lei Ma, and Yang Liu.
+\newblock Oracle-supported dynamic exploit generation for smart contracts,
+  2019{\natexlab{c}}.
+
+\bibitem[Bhargavan et~al.(2016)Bhargavan, Delignat-Lavaud, Fournet, Gollamudi,
+  Gonthier, Kobeissi, Kulatova, Rastogi, Sibut-Pinote, Swamy,
+  et~al.]{bhargavan2016formal}
+Karthikeyan Bhargavan, Antoine Delignat-Lavaud, C{\'e}dric Fournet, Anitha
+  Gollamudi, Georges Gonthier, Nadim Kobeissi, Natalia Kulatova, Aseem Rastogi,
+  Thomas Sibut-Pinote, Nikhil Swamy, et~al.
+\newblock Formal verification of smart contracts: Short paper.
+\newblock In \emph{Proceedings of the 2016 ACM Workshop on Programming
+  Languages and Analysis for Security}, pages 91--96. ACM, 2016.
+
+\bibitem[Hildenbrandt et~al.(2017)Hildenbrandt, Saxena, Zhu, Rodrigues, Daian,
+  Guth, and Rosu]{hildenbrandt2017kevm}
+Everett Hildenbrandt, Manasvi Saxena, Xiaoran Zhu, Nishant Rodrigues, Philip
+  Daian, Dwight Guth, and Grigore Rosu.
+\newblock Kevm: A complete semantics of the ethereum virtual machine.
+\newblock Technical report, 2017.
+
+\bibitem[Park et~al.(2018)Park, Zhang, Saxena, Daian, and
+  Ro{\c{s}}u]{park2018formal}
+Daejun Park, Yi~Zhang, Manasvi Saxena, Philip Daian, and Grigore Ro{\c{s}}u.
+\newblock A formal verification tool for ethereum vm bytecode.
+\newblock In \emph{Proceedings of the 2018 26th ACM Joint Meeting on European
+  Software Engineering Conference and Symposium on the Foundations of Software
+  Engineering}, pages 912--915. ACM, 2018.
+
+\bibitem[Jiao et~al.(2020{\natexlab{a}})Jiao, Kan, Lin, San\'{a}n, Liu, and
+  Sun]{JKL20}
+Jiao Jiao, Shuanglong Kan, Shang-Wei Lin, David San\'{a}n, Yang Liu, and Jun
+  Sun.
+\newblock Semantic understanding of smart contracts: Executable operational
+  semantics of solidity.
+\newblock In \emph{2020 IEEE symposium on security and privacy (SP)}, pages
+  1695--1712. IEEE, 2020{\natexlab{a}}.
+
+\bibitem[Jiao et~al.(2020{\natexlab{b}})Jiao, Lin, and Sun]{JLS20}
+Jiao Jiao, Shang-Wei Lin, and Jun Sun.
+\newblock A generalized formal semantic framework for smart contracts.
+\newblock In \emph{2020 International Conference on Fundamental Approaches to
+  Software Engineering (FASE)}, pages 75--96, 2020{\natexlab{b}}.
+
+\bibitem[Abdellatif and Brousmiche(2018)]{abdellatif2018formal}
+Tesnim Abdellatif and Kei-L{\'e}o Brousmiche.
+\newblock Formal verification of smart contracts based on users and blockchain
+  behaviors models.
+\newblock In \emph{2018 9th IFIP International Conference on New Technologies,
+  Mobility and Security (NTMS)}, pages 1--5. IEEE, 2018.
+
+\bibitem[Nehai et~al.(2018)Nehai, Piriou, and Daumas]{nehai2018model}
+Zeinab Nehai, Pierre-Yves Piriou, and Frederic Daumas.
+\newblock Model-checking of smart contracts.
+\newblock In \emph{2018 IEEE International Conference on Internet of Things
+  (iThings) and IEEE Green Computing and Communications (GreenCom) and IEEE
+  Cyber, Physical and Social Computing (CPSCom) and IEEE Smart Data
+  (SmartData)}, pages 980--987. IEEE, 2018.
+
+\bibitem[Zemel et~al.(2013)Zemel, Wu, Swersky, Pitassi, and
+  Dwork]{zemel2013learning}
+Rich Zemel, Yu~Wu, Kevin Swersky, Toni Pitassi, and Cynthia Dwork.
+\newblock Learning fair representations.
+\newblock In \emph{International Conference on Machine Learning}, pages
+  325--333, 2013.
+
+\bibitem[Datta et~al.(2016)Datta, Sen, and Zick]{datta2016algorithmic}
+Anupam Datta, Shayak Sen, and Yair Zick.
+\newblock Algorithmic transparency via quantitative input influence: Theory and
+  experiments with learning systems.
+\newblock In \emph{2016 IEEE symposium on security and privacy (SP)}, pages
+  598--617. IEEE, 2016.
+
+\bibitem[Albarghouthi et~al.(2017)Albarghouthi, D'Antoni, Drews, and
+  V.~Nori]{Albarghouthi2017FairSquarePV}
+Aws Albarghouthi, Loris D'Antoni, Samuel Drews, and Aditya V.~Nori.
+\newblock Fairsquare: probabilistic verification of program fairness.
+\newblock \emph{Proceedings of the ACM on Programming Languages}, 1:\penalty0
+  80:1--80:30, 2017.
+
+\bibitem[Verma and Rubin(2018)]{VR18}
+Sahil Verma and Julia Rubin.
+\newblock Fairness definitions explained.
+\newblock In \emph{IEEE/ACM International Workshop on Software Fairness
+  (FairWare)}, pages 1--7, 05 2018.
+\newblock \doi{10.1145/3194770.3194776}.
+
+\bibitem[Albarghouthi and Vinitsky(2019)]{Albarghouthi2019FairnessAwareP}
+Aws Albarghouthi and Samuel Vinitsky.
+\newblock Fairness-aware programming.
+\newblock In \emph{the Conference on Fairness, Accountability, and
+  Transparency}, pages 211--219, 2019.
+
+\bibitem[Chen et~al.(2018{\natexlab{a}})Chen, Zheng, Cui, Ngai, Zheng, and
+  Zhou]{chen2018detecting}
+Weili Chen, Zibin Zheng, Jiahui Cui, Edith Ngai, Peilin Zheng, and Yuren Zhou.
+\newblock Detecting ponzi schemes on ethereum: Towards healthier blockchain
+  technology.
+\newblock In \emph{Proceedings of the 2018 World Wide Web Conference}, pages
+  1409--1418. International World Wide Web Conferences Steering Committee,
+  2018{\natexlab{a}}.
+
+\bibitem[Maskin(2008)]{maskin2008mechanism}
+Eric~S Maskin.
+\newblock Mechanism design: How to implement social goals.
+\newblock \emph{American Economic Review}, 98\penalty0 (3):\penalty0 567--76,
+  2008.
+
+\bibitem[Klemperer(1999)]{klemperer1999auction}
+Paul Klemperer.
+\newblock Auction theory: A guide to the literature.
+\newblock \emph{Journal of economic surveys}, 13\penalty0 (3):\penalty0
+  227--286, 1999.
+
+\bibitem[Lehmann et~al.(2002)Lehmann, O{\'c}allaghan, and
+  Shoham]{lehmann2002truth}
+Daniel Lehmann, Liadan~Ita O{\'c}allaghan, and Yoav Shoham.
+\newblock Truth revelation in approximately efficient combinatorial auctions.
+\newblock \emph{Journal of the ACM (JACM)}, 49\penalty0 (5):\penalty0 577--602,
+  2002.
+
+\bibitem[Hahn et~al.(2017)Hahn, Singh, Liu, and Chen]{hahn2017smart}
+Adam Hahn, Rajveer Singh, Chen-Ching Liu, and Sijie Chen.
+\newblock Smart contract-based campus demonstration of decentralized
+  transactive energy auctions.
+\newblock In \emph{2017 IEEE Power \& Energy Society Innovative Smart Grid
+  Technologies Conference (ISGT)}, pages 1--5. IEEE, 2017.
+
+\bibitem[Chen et~al.(2018{\natexlab{b}})Chen, Chen, and
+  Lin]{chen2018blockchain}
+Yi-Hui Chen, Shih-Hsin Chen, and Iuon-Chang Lin.
+\newblock Blockchain based smart contract for bidding system.
+\newblock In \emph{2018 IEEE International Conference on Applied System
+  Invention (ICASI)}, pages 208--211. IEEE, 2018{\natexlab{b}}.
+
+\bibitem[Galal and Youssef(2018)]{galal2018succinctly}
+Hisham~S Galal and Amr~M Youssef.
+\newblock Succinctly verifiable sealed-bid auction smart contract.
+\newblock In \emph{Data Privacy Management, Cryptocurrencies and Blockchain
+  Technology}, pages 3--19. Springer, 2018.
+
+\bibitem[McCorry et~al.(2017)McCorry, Shahandashti, and Hao]{mccorry2017smart}
+Patrick McCorry, Siamak~F Shahandashti, and Feng Hao.
+\newblock A smart contract for boardroom voting with maximum voter privacy.
+\newblock In \emph{International Conference on Financial Cryptography and Data
+  Security}, pages 357--375. Springer, 2017.
+
+\bibitem[Bigi et~al.(2015)Bigi, Bracciali, Meacci, and
+  Tuosto]{bigi2015validation}
+Giancarlo Bigi, Andrea Bracciali, Giovanni Meacci, and Emilio Tuosto.
+\newblock Validation of decentralised smart contracts through game theory and
+  formal methods.
+\newblock In \emph{Programming Languages with Applications to Biology and
+  Security}, pages 142--161. Springer, 2015.
+
+\bibitem[Chatterjee et~al.(2018)Chatterjee, Goharshady, and
+  Velner]{chatterjee2018quantitative}
+Krishnendu Chatterjee, Amir~Kafshdar Goharshady, and Yaron Velner.
+\newblock Quantitative analysis of smart contracts.
+\newblock In \emph{European Symposium on Programming}, pages 739--767.
+  Springer, Cham, 2018.
+
+\bibitem[Iansiti and Lakhani(2017)]{iansiti2017truth}
+Marco Iansiti and Karim~R Lakhani.
+\newblock {The Truth about Blockchain}.
+\newblock \emph{Harvard Business Review}, 2017.
+
+\bibitem[azu(2020)]{azure-workbench}
+Azure blockchain workbench.
+\newblock
+  \url{https://azure.microsoft.com/en-us/features/blockchain-workbench/}, 2020.
+
+\bibitem[web(2020)]{webank}
+Webank (china).
+\newblock \url{https://en.wikipedia.org/wiki/WeBank_(China)}, 2020.
+
+\bibitem[vue(2020)]{vuejs}
+The progressive javascript framework.
+\newblock \url{https://vuejs.org/}, 2020.
+
+\bibitem[nod(2020)]{nodejs}
+Node.js.
+\newblock \url{https://nodejs.org/}, 2020.
+
+\bibitem[Wang et~al.(2019{\natexlab{d}})Wang, Li, Lin, Artho, Ma, and
+  Liu]{wang2019oracle}
+Haijun Wang, Yi~Li, Shang-Wei Lin, Cyrille Artho, Lei Ma, and Yang Liu.
+\newblock Oracle-supported dynamic exploit generation for smart contracts.
+\newblock \emph{arXiv preprint arXiv:1909.06605}, 2019{\natexlab{d}}.
+
+\bibitem[Mavridou and Laszka(2018)]{mavridou2018designing}
+Anastasia Mavridou and Aron Laszka.
+\newblock Designing secure ethereum smart contracts: A finite state machine
+  based approach.
+\newblock In \emph{International Conference on Financial Cryptography and Data
+  Security}, pages 523--540. Springer, 2018.
+
+\bibitem[Liu et~al.(2018)Liu, Liu, Cao, Chen, Chen, and Roscoe]{liu2018reguard}
+Chao Liu, Han Liu, Zhao Cao, Zhong Chen, Bangdao Chen, and Bill Roscoe.
+\newblock Reguard: finding reentrancy bugs in smart contracts.
+\newblock In \emph{Proceedings of the 40th International Conference on Software
+  Engineering: Companion Proceeedings}, pages 65--68. ACM, 2018.
+
+\bibitem[Nguyen et~al.(2020)Nguyen, Pham, Sun, Lin, and Minh]{nguyen2020sfuzz}
+Tai~D Nguyen, Long~H Pham, Jun Sun, Yun Lin, and Quang~Tran Minh.
+\newblock sfuzz: An efficient adaptive fuzzer for solidity smart contracts.
+\newblock \emph{arXiv preprint arXiv:2004.08563}, 2020.
+
+\bibitem[Born et~al.(2020)Born, Naseer, and Ferles]{born2020formal}
+Cody Born, Immad Naseer, and Kostas Ferles.
+\newblock Formal verification of workflow policies for smart contracts in azure
+  blockchain.
+\newblock In \emph{Verified Software. Theories, Tools, and Experiments: 11th
+  International Conference, VSTTE 2019, New York City, NY, USA, July 13--14,
+  2019, Revised Selected Papers}, volume 12031, page~87. Springer Nature, 2020.
+
+\bibitem[Mavridou et~al.(2019)Mavridou, Laszka, Stachtiari, and
+  Dubey]{Mavridou2019}
+Anastasia Mavridou, Aron Laszka, Emmanouela Stachtiari, and Abhishek Dubey.
+\newblock {VeriSolid: Correct-by-Design Smart Contracts for Ethereum}.
+\newblock jan 2019.
+\newblock URL \url{http://arxiv.org/abs/1901.01292}.
+
+\bibitem[Utting et~al.(2012)Utting, Pretschner, and
+  Legeard]{utting2012taxonomy}
+Mark Utting, Alexander Pretschner, and Bruno Legeard.
+\newblock A taxonomy of model-based testing approaches.
+\newblock \emph{Software testing, verification and reliability}, 22\penalty0
+  (5):\penalty0 297--312, 2012.
 
 \end{thebibliography}

@@ -1,12 +1,9 @@
-\chapter{Inferring Behaviour Model and Test Oracles for Smart Contract} % Main chapter title
-\chaptermark{Inferring Behaviour Model and Test Oracles for Smart Contract}  % replace the chapter name with its abbreviated form
-\label{ch:infcon} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
-
-\section{Background And Contract Model}
-\label{sec: Background}
+\chapter{Preliminary}
+\chaptermark{Preliminary}
+\label{ch:preliminary}
 \begin{figure}[t]
 	\centering
-	\includegraphics[scale=0.7]{figures/SmartContractTransaction.pdf}
+	\includegraphics[scale=0.7]{Figures/Chapter5/SmartContractTransaction.pdf}
 	\caption{The smart contract transaction on Ethereum.}
 	\label{fig:smartcontractTransaction}
 \end{figure}
@@ -43,35 +40,10 @@ If the transaction status indicates success, the state of contract will transiti
 	For simplicity, every function can be implied by a boolean program: $f\implies Precondition(\Delta_1) \land StateChanges(\Delta_2)$,  where \textit{Precondition($\Delta_1$)} is a set of predicates related to check of global variables, i.e., state variables of contract and \textit{StateChanges($\Delta_2$)} is a set of assignments of global variables.
 \end{definition}
 
-We divide predicates used for global variables checking into the following four categories:
-\begin{itemize}
-	\item \textbf{compared with trivial transaction input.} These trivial transaction input includes the transferred ether and function input. For example, $require(balance[msg.sender] >= amt)$ is used for ERC-20 token transfer function which specifies amount to transfer his/her token to others.
-	This predicate indicates that any user cannot transfer token of \textit{amt} larger than his/her account balance. 
-	However, this case won't affect the reachability of function since user can adjust the given \textit{amt} to pass the check and we aggressively have  $f\implies StateChanges(\Delta_2)$.
-	
-	\item \textbf{compared with transaction sender.}
-	The transaction sender includes \textit{tx.origin}, the creator of initial transaction, and \textit{msg.sender} of every message call to contracts.
-	A user cannot modify the value of \textit{tx.origin} and \textit{msg.sender}.
-	Therefore, this case like $require(msg.sender == owner)$, will influence whether a user can reach a function successfully and we have $f\implies Precondition(\Delta_1) \land StateChanges(\Delta_2)$.
-	\item \textbf{compared with constant variable.}
-	State machine-based smart contract design is recommended to prevent illegal function access.
-	For example, $\{Escrow.state == X | X \in \{OPEN, SUCCESS, REFUND\}\}$ is used in \textit{CrowdSale} contract from OpenZeppelin library, where user access is only allowed for limited functions at a specific state.
-	Because this type of predicates is irrelevant to user, it will control user access to contract functions  and we have $f\implies StateChanges(\Delta_2)$.
-	
-	\item \textbf{compared with environment variable.}
-	The blockchain environment variables such as \textit{block.number}, \textit{block.timestamp} are usually used as soft clock or random seed of contracts. 
-	However, these variables can be manipulated by miner.
-	This will introduce great uncertainty if contract' access control relies on environment variables.
-	For simplicity, we do not take the predicates related to environment variables into consideration in this paper and we aggressively have $f\implies Precondition(\Delta_1) \land StateChanges(\Delta_2)$.
-\end{itemize}
-
-Above, we consider \textit{Precondition($\Delta_1$)} for the predicates, i.e., the comparison between global variables and transaction sender as well as constant variables, which is usually to restrict user access.
 Meanwhile, most smart contracts are designed as an organization for a social purpose, where users explicitly or implicitly play different roles 
 when they participate in smart contract via transactions.
 These smart contracts have been widely adopted in many areas including finance, gambling, exchanges, governance, property and etc..
-%The core of DApps are supported using smart contracts for achieving different purpose.
-%How to make a claim that smart contracts are task based.
 For instance, the Ethereum Name Service (ENS) uses contracts to provide the auction service for users bidding the domains on Ethereum;
 Dicether uses contracts to maintain houses for users' participation in gambling games;
 while CryptoKitties uses contracts to organize blockchain stores for the exchange, breeding and siring of digital pets implemented as non-fungible tokens (NFTs). 
-Therefore, it is critical to ensure smart contracts achieve the permission safety for the sake of the security of managed digital assets.
+Therefore, it is critical to ensure smart contracts achieve the safety for the sake of the security of managed digital assets belong to users of different roles.

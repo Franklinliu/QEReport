@@ -41,7 +41,9 @@
 %\usepackage{mathtools}
 %\usepackage[ruled,vlined,noresetcount]{algorithm2e}
 %%\usepackage{algpseudocode}
-%\usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers'
+\usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers'
+
+
 
 \title{\ttitle} % Defines the thesis title - don't touch this
 
@@ -74,8 +76,8 @@
 
 %%% Use \maketitleforreview instead of \maketitle, if you want a PLAIN TITLE PAGE
 
-%\maketitle
-\maketitleforreview
+\maketitle
+%\maketitleforreview
 
 
 % % ----------------------------------------------------------------------------------------
@@ -162,27 +164,38 @@
 % %	ABSTRACT PAGE
 % %----------------------------------------------------------------------------------------
 
-% \addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
+ \addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
 
-% \abstract{\addtocontents{toc}{\vspace{0.8em}}}% Add a gap in the Contents, for aesthetics
+ \abstract{\addtocontents{toc}{\vspace{0.8em}}}% Add a gap in the Contents, for aesthetics
 
 % % 1. The Problem 2. The Issues 3. The Approach 4. The Results 5. The Experiments 6. The Applications
 
 % My abstracts
+Smart contracts are stateful computer programs running on blockchain platforms to manage large sums of
+cryptocurrency, govern and carry out transactions of assets between multiple parties.
+The security of smart contracts has attracted great attention, ever since their adoption in the management of massive cryptocurrency transactions.
+However, little work has been done on stateful smart contract applications for its great complexity.
+The main challenge lies that most smart contracts are not well specified.
+Compared to the security, the fairness issues of smart contracts have not yet attracted much attention. 
+However, there is a likely mismatch between the participants' expectations and the actual implementation of contracts.
 
-
-
+In this progress report, several solutions are proposed to address this challenge.
+An automated verification framework of smart contract fairness is used to help find the mismatch between the user expectations and the contract implementation where contracts are abstracted as games, i.e., mechanism models and the fairness properties originate from game theory as well.
+For enterprise smart contracts, they are well specified.
+A model-based testing framework is provided to facilitate the testing of these smart contracts.
+To overcome the missing of contract specification, our future work aims to learn a likely specification of smart contracts and find user permission bugs via time travel on transaction history. 
+A big picture of the framework to enforce both security and fairness of smart contracts also remains to do in the future.
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
 %----------------------------------------------------------------------------------------
 
 % \pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
 
-% \tableofcontents % Write out the Table of Contents
+\tableofcontents % Write out the Table of Contents
 
-% \listoffigures % Write out the List of Figures
+\listoffigures % Write out the List of Figures
 
-% \listoftables % Write out the List of Tables
+\listoftables % Write out the List of Tables
 
 
 %----------------------------------------------------------------------------------------
@@ -356,12 +369,12 @@
 
 % \part{Introduction and Background}
 \input{./Chapters/Chapter1}
-% \input{./Chapters/Chapter2}
-% \input{./Chapters/Chapter3}
+\input{./Chapters/Chapter5}
+\input{./Chapters/Chapter2}
+\input{./Chapters/Chapter3}
 \input{./Chapters/Chapter4}
 %\part{Coordinated Estimation} %
-%\input{./Chapters/Chapter5}
-%\input{./Chapters/conclusion}
+\input{./Chapters/conclusion}
 %\input{./Chapters/future_work}
 %\input{./Chapters/Chapter7}
 
@@ -392,6 +405,8 @@
 \label{Bibliography}
 \setstretch{1}
 \bibliographystyle{unsrtnat}
-\bibliography{bibexport}
+%\bibliographystyle{ACM-Reference-Format}
+%\bibliography{bibexport}
+\bibliography{References/ref}
 
 \end{document}

@@ -2,47 +2,52 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: unsrtnat.bst
-Database file #1: bibexport.bib
+Database file #1: References/ref.bib
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "bartoletti2019dissecting"
 Warning--empty journal in nakamoto2008bitcoin
-You've used 26 entries,
+Warning--empty journal in Perez2019
+Warning--empty institution in hildenbrandt2017kevm
+Warning--empty journal in Mavridou2019
+You've used 76 entries,
             2481 wiz_defined-function locations,
-            694 strings with 8025 characters,
-and the built_in function-call counts, 7988 in all, are:
-= -- 739
-> -- 235
-< -- 13
-+ -- 121
-- -- 68
-* -- 511
-:= -- 1134
-add.period$ -- 78
-call.type$ -- 26
-change.case$ -- 48
-chr.to.int$ -- 25
-cite$ -- 35
-duplicate$ -- 465
-empty$ -- 869
-format.name$ -- 88
-if$ -- 1794
-int.to.chr$ -- 2
-int.to.str$ -- 27
-missing$ -- 13
-newline$ -- 135
-num.names$ -- 45
-pop$ -- 254
+            957 strings with 17950 characters,
+and the built_in function-call counts, 30653 in all, are:
+= -- 2689
+> -- 1434
+< -- 52
++ -- 582
+- -- 424
+* -- 2174
+:= -- 4490
+add.period$ -- 250
+call.type$ -- 76
+change.case$ -- 149
+chr.to.int$ -- 70
+cite$ -- 93
+duplicate$ -- 1679
+empty$ -- 2936
+format.name$ -- 505
+if$ -- 6884
+int.to.chr$ -- 7
+int.to.str$ -- 77
+missing$ -- 55
+newline$ -- 385
+num.names$ -- 180
+pop$ -- 800
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 76
 quote$ -- 0
-skip$ -- 305
+skip$ -- 1092
 stack$ -- 0
-substring$ -- 285
-swap$ -- 82
-text.length$ -- 3
+substring$ -- 1270
+swap$ -- 446
+text.length$ -- 32
 text.prefix$ -- 2
 top$ -- 0
-type$ -- 182
-warning$ -- 1
-while$ -- 50
+type$ -- 532
+warning$ -- 4
+while$ -- 226
 width$ -- 0
-write$ -- 326
-(There was 1 warning)
+write$ -- 981
+(There were 6 warnings)
