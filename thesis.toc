@@ -28,7 +28,7 @@
 \contentsline {subsection}{\numberline {3.6.2}Fairness Checking in Software Systems}{36}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Mechanism Design and Game Theory}{36}{subsection.3.6.3}%
 \contentsline {section}{\numberline {3.7}Conclusion and Future Work}{37}{section.3.7}%
-\contentsline {chapter}{\numberline {4}Model-Based Testing Platform for Smart Contract}{39}{chapter.4}%
+\contentsline {chapter}{\numberline {4}ModCon: a model-based testing platform for smart contracts}{39}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{39}{section.4.1}%
 \contentsline {section}{\numberline {4.2}\textsc {ModCon}\xspace Overview}{43}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}User Interface}{43}{subsection.4.2.1}%
