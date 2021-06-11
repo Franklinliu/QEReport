@@ -209,7 +209,7 @@
 
 %Your thesis title - this is used in the title and abstract
 %-------------------------------------------------
-\thesistitle{Towards Smart Contract Fairness Verification, Model-Based Testing and User Permission Analysis} %
+\thesistitle{On Security and Reliability of Smart Contracts} %
 %-------------------------------------------------
 \supervisor{Asst Prof. Li Yi \textsc{XXX}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------
@@ -277,7 +277,7 @@
   \setstretch{2}
   \vfill
 %  \textbf{\LARGE \newline \rule{\linewidth}{2pt}\\\vspace{-7pt}\ttitle\\\rule{\linewidth}{2pt}}\\% Thesis title
-  \textbf{\LARGE \ttitle }\\% Thesis title
+  \textsc{\LARGE \ttitle }\\% Thesis title
   % \setstretch{1.5}
   \vfill
 %  \href{http://www.ntu.edu.sg}{\includegraphics[width=230pt]{Styles/ntu_logo}}\\%[2cm]
