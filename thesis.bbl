@@ -104,23 +104,6 @@ Shuangke Wu, Yanjiao Chen, Qian Wang, Minghui Li, Cong Wang, and Xiangyang Luo.
 \newblock \emph{IEEE Transactions on Information Forensics and Security},
   14\penalty0 (7):\penalty0 1687--1701, 2018.
 
-\bibitem[Jackson(2014)]{jackson2014mechanism}
-Matthew~O Jackson.
-\newblock Mechanism theory.
-\newblock \emph{Available at SSRN 2542983}, 2014.
-
-\bibitem[Nisan and Ronen(2001)]{nisan2001algorithmic}
-Noam Nisan and Amir Ronen.
-\newblock Algorithmic mechanism design.
-\newblock \emph{Games and Economic behavior}, 35\penalty0 (1-2):\penalty0
-  166--196, 2001.
-
-\bibitem[King(1976)]{king1976symbolic}
-James~C King.
-\newblock Symbolic execution and program testing.
-\newblock \emph{Communications of the ACM}, 19\penalty0 (7):\penalty0 385--394,
-  1976.
-
 \bibitem[Solidity()]{solidity}
 Solidity.
 \newblock {Solidity}.
@@ -134,6 +117,12 @@ Mamata Jenamani, Yuhui Zhong, and Bharat Bhargava.
 \newblock \emph{Electronic Commerce Research and Applications}, 6\penalty0
   (1):\penalty0 53--62, 2007.
 
+\bibitem[King(1976)]{king1976symbolic}
+James~C King.
+\newblock Symbolic execution and program testing.
+\newblock \emph{Communications of the ACM}, 19\penalty0 (7):\penalty0 385--394,
+  1976.
+
 \bibitem[Leino(2010)]{dafny}
 K.~Rustan~M. Leino.
 \newblock Dafny: An automatic program verifier for functional correctness.
@@ -141,6 +130,17 @@ K.~Rustan~M. Leino.
   for Programming, Artificial Intelligence, and Reasoning}, LPAR'10, pages
   348--370, Berlin, Heidelberg, 2010. Springer-Verlag.
 \newblock ISBN 3642175104.
+
+\bibitem[Jackson(2014)]{jackson2014mechanism}
+Matthew~O Jackson.
+\newblock Mechanism theory.
+\newblock \emph{Available at SSRN 2542983}, 2014.
+
+\bibitem[Nisan and Ronen(2001)]{nisan2001algorithmic}
+Noam Nisan and Amir Ronen.
+\newblock Algorithmic mechanism design.
+\newblock \emph{Games and Economic behavior}, 35\penalty0 (1-2):\penalty0
+  166--196, 2001.
 
 \bibitem[erc(2020{\natexlab{a}})]{erc-1202}
 Eip-1202: Voting standard.

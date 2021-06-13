@@ -1,0 +1,30 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The overview of the current work (solid box) and future works (dashed box).\relax }}{3}{figure.caption.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The smart contract transaction on Ethereum.\relax }}{6}{figure.caption.8}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The CryptoRomeAuction Solidity source code.\relax }}{14}{figure.caption.9}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The mechanism model of CryptoRomeAuction with three bidders.\relax }}{16}{figure.caption.11}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces The CryptoRomeAuction Solidity source code.\relax }}{25}{figure.caption.12}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces The mechanism model of CryptoRomeAuction with three bidders.\relax }}{27}{figure.caption.14}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Syntax of the auction/voting mechanism model.\relax }}{31}{figure.caption.15}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Semantic rules of the auction/voting model.\relax }}{32}{figure.caption.16}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Workflow of the \textsc {FairCon}\xspace framework.\relax }}{32}{figure.caption.17}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces The harness program for mechanism model orchestration.\relax }}{34}{figure.caption.18}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces The EtherAuction Solidity source code.\relax }}{42}{figure.caption.34}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Model extraction time with increasing number of bidders.\relax }}{43}{figure.caption.35}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Property checking time with increasing number of bidders.\relax }}{43}{figure.caption.36}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Illustration of a CMA\xspace smart contract at WeBank\xspace .\relax }}{53}{figure.caption.37}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Architecture of \textsc {ModCon}\xspace .\relax }}{54}{figure.caption.38}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Smart contract deployment and setup.\relax }}{55}{figure.caption.39}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces User-configured model specification.\relax }}{56}{figure.caption.40}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Test generation control panel.\relax }}{57}{figure.caption.41}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces State and transition coverage achieved per test for CMA\xspace and \texttt {BlindAuction}.\relax }}{59}{figure.caption.42}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Illustration of the time-travel-based security policy validation.\relax }}{64}{figure.caption.43}%
+\addvspace {10\p@ }
