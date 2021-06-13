@@ -1,0 +1,91 @@
+\documentclass[twocolumn]{article}
+
+\usepackage{lipsum}
+\input{solidity-highlighting.tex}	% copy the file from this repo
+\begin{document}
+
+\begin{figure*}[hbtp]
+	\caption{Code}
+	\label{code.1}
+\lipsum[1]
+\begin{multicols}{2}
+\begin{lstlisting}[language=Solidity] 
+	pragma solidity 0.4.16;		
+	
+	contract TestContract {	
+	  
+	  string private myString = "foo";	
+	  
+	  function getString() constant returns (string) {
+		return myString;
+	  }
+	  // hello world
+			
+	  function setString (string _string) {
+		myString = _string;
+	  }
+	}
+\end{lstlisting}
+\end{multicols}
+\lipsum[2]
+\clearpage
+\twocolumn
+\lipsum[1]
+\lipsum[2]
+\begin{lstlisting}[language=Solidity] 
+pragma solidity 0.4.16;
+
+contract TestContract {
+
+  string private myString = "foo";
+
+  function getString() constant returns (string) {
+    return myString;
+  }
+  // hello world
+
+  function setString (string _string) {
+    myString = _string;
+  }
+}
+\end{lstlisting}
+\lipsum[2]
+\end{figure*}
+
+\lipsum[1]
+\begin{multicols}{2}
+	\begin{lstlisting}[numbers=left,xleftmargin=3em]
+	First line.
+	Second line.
+	Third line.
+	Next line.
+	Next Line
+	Next line.
+	Next Line
+	Next line.
+	Next Line
+	Next line.
+	Next Line
+	\end{lstlisting}
+\end{multicols}
+\lipsum[2]
+\clearpage
+\twocolumn
+\lipsum[1]
+\lipsum[2]
+\begin{lstlisting}[numbers=left,xleftmargin=3em]
+First line.
+Second line.
+Third line.
+Next line.
+Next Line
+Next line.
+Next Line
+Next line.
+Next Line
+Next line.
+Next Line
+\end{lstlisting}
+\lipsum[2]
+
+\end{document}
