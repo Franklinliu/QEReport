@@ -1,39 +1,9 @@
-\begin{thebibliography}{76}
+\begin{thebibliography}{84}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Nakamoto et~al.(2008)]{nakamoto2008bitcoin}
-Satoshi Nakamoto et~al.
-\newblock Bitcoin: A peer-to-peer electronic cash system.
-\newblock 2008.
-
-\bibitem[Wood(2014)]{Ethereum}
-Gavin Wood.
-\newblock Ethereum: A secure decentralised generalised transaction ledger.
-\newblock \emph{Ethereum project yellow paper}, 151:\penalty0 1--32, 2014.
-
-\bibitem[hyp(2020)]{hyperledger-fabric}
-Open, proven, enterprise-grade dlt.
-\newblock
-  \url{https://www.hyperledger.org/wp-content/uploads/2020/03/hyperledger_fabric_whitepaper.pdf},
-  2020.
-
-\bibitem[fis(2020)]{fisco}
-{FISCO BCOS}.
-\newblock \url{https://fisco-bcos.org/}, 2020.
-
-\bibitem[IO(2017)]{EOS}
-EOS IO.
-\newblock Eos. io technical white paper.
-\newblock \emph{EOS. IO (accessed 18 December 2017) https://github.
-  com/EOSIO/Documentation}, 2017.
-
-\bibitem[dap(2020)]{dapp-stats}
-Dapp statistics.
-\newblock \url{https://www.stateofthedapps.com/stats}, 2020.
 
 \bibitem[Siegel(2016)]{DAO_attacks}
 David Siegel.
@@ -47,11 +17,19 @@ PeckShield.
 \newblock URL
   \url{https://medium.com/@peckshield/eos-transaction-congestion-attack-attackers-could-paralyze-eos-network-with-minimal-cost-9adfb4d16c82}.
 
+\bibitem[Eth(2020)]{Etherscan}
+Etherscan.
+\newblock \url{https://etherscan.io}, 2020.
+
 \bibitem[gas(2020)]{gas-fee}
 Ethereum transaction fees fall by 75\% as congestion eases.
 \newblock
   \url{https://cointelegraph.com/news/ethereum-transaction-fees-fall-by-75-as-congestion-eases},
   2020.
+
+\bibitem[fis(2020)]{fisco}
+{FISCO BCOS}.
+\newblock \url{https://fisco-bcos.org/}, 2020.
 
 \bibitem[Jiang et~al.(2018)Jiang, Liu, and Chan]{jiang2018contractfuzzer}
 Bo~Jiang, Ye~Liu, and WK~Chan.
@@ -82,10 +60,6 @@ Haijun Wang, Yi~Li, Shang-Wei Lin, Lei Ma, and Yang Liu.
   Engineering: New Ideas and Emerging Results}, pages 1--4. IEEE Press,
   2019{\natexlab{a}}.
 
-\bibitem[Eth(2020)]{Etherscan}
-Etherscan.
-\newblock \url{https://etherscan.io}, 2020.
-
 \bibitem[Bartoletti et~al.(2020)Bartoletti, Carta, Cimoli, and
   Saia]{BARTOLETTI2020259}
 Massimo Bartoletti, Salvatore Carta, Tiziana Cimoli, and Roberto Saia.
@@ -104,6 +78,23 @@ Shuangke Wu, Yanjiao Chen, Qian Wang, Minghui Li, Cong Wang, and Xiangyang Luo.
 \newblock \emph{IEEE Transactions on Information Forensics and Security},
   14\penalty0 (7):\penalty0 1687--1701, 2018.
 
+\bibitem[Jackson(2014)]{jackson2014mechanism}
+Matthew~O Jackson.
+\newblock Mechanism theory.
+\newblock \emph{Available at SSRN 2542983}, 2014.
+
+\bibitem[Nisan and Ronen(2001)]{nisan2001algorithmic}
+Noam Nisan and Amir Ronen.
+\newblock Algorithmic mechanism design.
+\newblock \emph{Games and Economic behavior}, 35\penalty0 (1-2):\penalty0
+  166--196, 2001.
+
+\bibitem[King(1976)]{king1976symbolic}
+James~C King.
+\newblock Symbolic execution and program testing.
+\newblock \emph{Communications of the ACM}, 19\penalty0 (7):\penalty0 385--394,
+  1976.
+
 \bibitem[Solidity()]{solidity}
 Solidity.
 \newblock {Solidity}.
@@ -117,12 +108,6 @@ Mamata Jenamani, Yuhui Zhong, and Bharat Bhargava.
 \newblock \emph{Electronic Commerce Research and Applications}, 6\penalty0
   (1):\penalty0 53--62, 2007.
 
-\bibitem[King(1976)]{king1976symbolic}
-James~C King.
-\newblock Symbolic execution and program testing.
-\newblock \emph{Communications of the ACM}, 19\penalty0 (7):\penalty0 385--394,
-  1976.
-
 \bibitem[Leino(2010)]{dafny}
 K.~Rustan~M. Leino.
 \newblock Dafny: An automatic program verifier for functional correctness.
@@ -130,17 +115,6 @@ K.~Rustan~M. Leino.
   for Programming, Artificial Intelligence, and Reasoning}, LPAR'10, pages
   348--370, Berlin, Heidelberg, 2010. Springer-Verlag.
 \newblock ISBN 3642175104.
-
-\bibitem[Jackson(2014)]{jackson2014mechanism}
-Matthew~O Jackson.
-\newblock Mechanism theory.
-\newblock \emph{Available at SSRN 2542983}, 2014.
-
-\bibitem[Nisan and Ronen(2001)]{nisan2001algorithmic}
-Noam Nisan and Amir Ronen.
-\newblock Algorithmic mechanism design.
-\newblock \emph{Games and Economic behavior}, 35\penalty0 (1-2):\penalty0
-  166--196, 2001.
 
 \bibitem[erc(2020{\natexlab{a}})]{erc-1202}
 Eip-1202: Voting standard.
@@ -418,10 +392,21 @@ Krishnendu Chatterjee, Amir~Kafshdar Goharshady, and Yaron Velner.
 \newblock In \emph{European Symposium on Programming}, pages 739--767.
   Springer, Cham, 2018.
 
-\bibitem[Iansiti and Lakhani(2017)]{iansiti2017truth}
-Marco Iansiti and Karim~R Lakhani.
-\newblock {The Truth about Blockchain}.
-\newblock \emph{Harvard Business Review}, 2017.
+\bibitem[Nakamoto et~al.(2008)]{nakamoto2008bitcoin}
+Satoshi Nakamoto et~al.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock 2008.
+
+\bibitem[Wood(2014)]{Ethereum}
+Gavin Wood.
+\newblock Ethereum: A secure decentralised generalised transaction ledger.
+\newblock \emph{Ethereum project yellow paper}, 151:\penalty0 1--32, 2014.
+
+\bibitem[hyp(2020)]{hyperledger-fabric}
+Open, proven, enterprise-grade dlt.
+\newblock
+  \url{https://www.hyperledger.org/wp-content/uploads/2020/03/hyperledger_fabric_whitepaper.pdf},
+  2020.
 
 \bibitem[azu(2020)]{azure-workbench}
 Azure blockchain workbench.
@@ -485,5 +470,74 @@ Mark Utting, Alexander Pretschner, and Bruno Legeard.
 \newblock A taxonomy of model-based testing approaches.
 \newblock \emph{Software testing, verification and reliability}, 22\penalty0
   (5):\penalty0 297--312, 2012.
+
+\bibitem[Dicether(2018)]{Dicether2018}
+Dicether.
+\newblock Dicether: A secure dice game, 2018.
+\newblock URL \url{https://dicether.github.io/paper/paper.pdf}.
+
+\bibitem[Sandhu et~al.(2000)Sandhu, Ferraiolo, Kuhn, et~al.]{sandhu2000nist}
+Ravi Sandhu, David Ferraiolo, Richard Kuhn, et~al.
+\newblock The nist model for role-based access control: towards a unified
+  standard.
+\newblock In \emph{ACM workshop on Role-based access control}, volume~10, 2000.
+
+\bibitem[Sandhu(1998)]{sandhu1998}
+Ravi~S Sandhu.
+\newblock Role-based access control.
+\newblock In \emph{Advances in computers}, volume~46, pages 237--286. Elsevier,
+  1998.
+
+\bibitem[Rabe(2016)]{rabe2016temporal}
+Markus~N Rabe.
+\newblock A temporal logic approach to information-flow control.
+\newblock 2016.
+
+\bibitem[Vaidya et~al.(2007)Vaidya, Atluri, and Guo]{vaidya2007role}
+Jaideep Vaidya, Vijayalakshmi Atluri, and Qi~Guo.
+\newblock The role mining problem: finding a minimal descriptive set of roles.
+\newblock In \emph{Proceedings of the 12th ACM symposium on Access control
+  models and technologies}, pages 175--184, 2007.
+
+\bibitem[Molloy et~al.(2008)Molloy, Chen, Li, Wang, Li, Bertino, Calo, and
+  Lobo]{molloy2008mining}
+Ian Molloy, Hong Chen, Tiancheng Li, Qihua Wang, Ninghui Li, Elisa Bertino,
+  Seraphin Calo, and Jorge Lobo.
+\newblock Mining roles with semantic meanings.
+\newblock In \emph{Proceedings of the 13th ACM symposium on Access control
+  models and technologies}, pages 21--30, 2008.
+
+\bibitem[Atzei et~al.(2016)Atzei, Bartoletti, and Cimoli]{atzei2016survey}
+Nicola Atzei, Massimo Bartoletti, and Tiziana Cimoli.
+\newblock A survey of attacks on ethereum smart contracts.
+\newblock \emph{IACR Cryptology ePrint Archive}, 2016:\penalty0 1007, 2016.
+
+\bibitem[Craig(1957)]{craig1957three}
+William Craig.
+\newblock Three uses of the herbrand-gentzen theorem in relating model theory
+  and proof theory.
+\newblock \emph{The Journal of Symbolic Logic}, 22\penalty0 (3):\penalty0
+  269--285, 1957.
+
+\bibitem[Cimatti et~al.(1999)Cimatti, Clarke, Giunchiglia, and
+  Roveri]{cimatti1999nusmv}
+Alessandro Cimatti, Edmund Clarke, Fausto Giunchiglia, and Marco Roveri.
+\newblock Nusmv: A new symbolic model verifier.
+\newblock In \emph{International conference on computer aided verification},
+  pages 495--499. Springer, 1999.
+
+\bibitem[Chen et~al.(2020)Chen, Cao, Li, Luo, Gu, Zhang, Liao, Zhu, Chen, He,
+  et~al.]{chen2020soda}
+Ting Chen, Rong Cao, Ting Li, Xiapu Luo, Guofei Gu, Yufei Zhang, Zhou Liao,
+  Hang Zhu, Gang Chen, Zheyuan He, et~al.
+\newblock Soda: A generic online detection framework for smart contracts.
+\newblock In \emph{27th Ann. Network and Distributed Systems Security Symp}.
+  The Internet Society, 2020.
+
+\bibitem[Akca et~al.(2019)Akca, Rajan, and Peng]{akca2019solanalyser}
+Sefa Akca, Ajitha Rajan, and Chao Peng.
+\newblock Solanalyser: A framework for analysing and testing smart contracts.
+\newblock In \emph{2019 26th Asia-Pacific Software Engineering Conference
+  (APSEC)}, pages 482--489. IEEE, 2019.
 
 \end{thebibliography}

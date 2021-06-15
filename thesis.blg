@@ -3,51 +3,56 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: unsrtnat.bst
 Database file #1: References/ref.bib
-Warning--I didn't find a database entry for ""
+Repeated entry---line 732 of file References/ref.bib
+ : @article{atzei2016survey
+ :                         ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "bartoletti2019dissecting"
-Warning--empty journal in nakamoto2008bitcoin
 Warning--empty journal in Perez2019
 Warning--empty institution in hildenbrandt2017kevm
+Warning--empty journal in nakamoto2008bitcoin
 Warning--empty journal in Mavridou2019
-You've used 76 entries,
+Warning--can't use both volume and number fields in sandhu2000nist
+Warning--empty journal in rabe2016temporal
+You've used 84 entries,
             2481 wiz_defined-function locations,
-            957 strings with 17950 characters,
-and the built_in function-call counts, 30653 in all, are:
-= -- 2689
-> -- 1434
-< -- 52
-+ -- 582
-- -- 424
-* -- 2174
-:= -- 4490
-add.period$ -- 250
-call.type$ -- 76
-change.case$ -- 149
-chr.to.int$ -- 70
-cite$ -- 93
-duplicate$ -- 1679
-empty$ -- 2936
-format.name$ -- 505
-if$ -- 6884
+            1002 strings with 19624 characters,
+and the built_in function-call counts, 34825 in all, are:
+= -- 3031
+> -- 1677
+< -- 61
++ -- 672
+- -- 498
+* -- 2491
+:= -- 5127
+add.period$ -- 279
+call.type$ -- 84
+change.case$ -- 165
+chr.to.int$ -- 78
+cite$ -- 102
+duplicate$ -- 1897
+empty$ -- 3306
+format.name$ -- 586
+if$ -- 7805
 int.to.chr$ -- 7
-int.to.str$ -- 77
-missing$ -- 55
-newline$ -- 385
-num.names$ -- 180
-pop$ -- 800
+int.to.str$ -- 85
+missing$ -- 63
+newline$ -- 426
+num.names$ -- 207
+pop$ -- 890
 preamble$ -- 1
-purify$ -- 76
+purify$ -- 84
 quote$ -- 0
-skip$ -- 1092
+skip$ -- 1228
 stack$ -- 0
-substring$ -- 1270
-swap$ -- 446
-text.length$ -- 32
+substring$ -- 1474
+swap$ -- 513
+text.length$ -- 39
 text.prefix$ -- 2
 top$ -- 0
-type$ -- 532
-warning$ -- 4
-while$ -- 226
+type$ -- 588
+warning$ -- 6
+while$ -- 262
 width$ -- 0
-write$ -- 981
-(There were 6 warnings)
+write$ -- 1091
+(There was 1 error message)

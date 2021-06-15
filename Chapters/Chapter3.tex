@@ -1,26 +1,24 @@
 %!TEX root=../mythesis.tex
 % Chapter Template
 
-\chapter{ModCon: a model-based testing platform for smart contracts} % Main chapter title
+\chapter{Testing} % Main chapter title
 \chaptermark{ModCon: Model-Based Test Platform for Smart Contract}  % replace the chapter name with its abbreviated form
 \label{ch:modcon} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-
-
+In this chapter, we will present a model-based testing framework for smart contracts as well as a semantic test oracle of effective fuzzing.
 %-----------------------------------
 % SECTION 1
 %-----------------------------------
-\section{Introduction}
+\section{Model-Based Testing}
 \label{sec:intro}
-
-Smart contracts are computer programs that execute on top of blockchains (e.g.,
-Ethereum~\cite{Ethereum}) to manage large sums of money, carry out transactions of assets, and
-govern the transfer of digital rights between different parties.
-Transactions conducted through smart contracts are recorded on blockchains, thus decentralized and
-immutable, without requiring validation from a central authority.
-Due to these unique advantages, smart contracts have gained much popularity in recent years.
-Many believe that this technology has the potential to reshape a number of industries,
-e.g., banking, insurance, supply chains, and financial services~\cite{iansiti2017truth}.
+%Smart contracts are computer programs that execute on top of blockchains (e.g.,
+%Ethereum~\cite{Ethereum}) to manage large sums of money, carry out transactions of assets, and
+%govern the transfer of digital rights between different parties.
+%Transactions conducted through smart contracts are recorded on blockchains, thus decentralized and
+%immutable, without requiring validation from a central authority.
+%Due to these unique advantages, smart contracts have gained much popularity in recent years.
+%Many believe that this technology has the potential to reshape a number of industries,
+%e.g., banking, insurance, supply chains, and financial services~\cite{iansiti2017truth}.
 
 The existing blockchain networks can be broadly categorized into the permissionless and
 permissioned blockchains, where the former is open to the public (e.g.,
@@ -151,29 +149,9 @@ the test generation and execution.
 %Deployment, Query/Transaction ) to interact with smart contracts on FISCO BCOS.
 %\modcon enables smart contract testing once user provides the model specification of smart contract
 %while \modcon allows for testing strategy or test case priority specified by user.
-The key features of \modcon include the following.
-\begin{itemize}[leftmargin=*,topsep=2pt]
-	\item \textbf{Test-Model Specification}.
-	\modcon allows users to provide a test model for the target smart contract.
-	The model is used to specify the state definitions, expected transition relations,
-	pre/post conditions to be satisfied for each transition, invariants, and the mapping from the
-	model to the contract code.
-	\item \textbf{Customized Test Generation}.
-	With the test model given, users can further customize the testing process by choosing from
-	different coverage strategies and test prioritization options.
-	\modcon then generates tests with the goal of exercising as many system behaviors as possible while
-	prioritizing on cases of particular interests.
-	Any violation of the specified oracle is recorded and reported to users.
-	\item \textbf{Web-Based Interface}.
-	\modcon has a Web-based interface, providing easy access to all the testing capabilities and
-	customization options.
-	Source code and a video demonstrating the usage of \modcon are available at \modconurl.
-	%  \modcon is data driven which could make the testing process to be perceived easily.
-\end{itemize}
-%\par
+The key features of \modcon include test-model specification, customized test generation and user friendly web-based interface.
 
-
-\section{\modcon Overview}
+\subsection{\modcon Overview}
 \label{sec:Overview}
 
 \begin{figure}[t]
@@ -197,7 +175,7 @@ On the back-end, the model-based testing engine is in charge of smart contract
 compilation/deployment, model specification analysis, and the customized model-based testing tasks
 as per users' requests.
 
-\subsection{User Interface}
+\subsubsection{User Interface}
 The user interface of \modcon mainly supports three tasks, namely, contract setup, model
 specification, and testing controls.
 
@@ -266,7 +244,7 @@ As shows in \cref{fig:modcon-test}, the ``cover states'' strategy is selected an
 \code{CREATED} and \code{DISCOUNTED} are covered by $10$ and $13$ test cases, respectively.
 
 
-\subsection{Back-End Implementation}
+\subsubsection{Back-End Implementation}
 \label{sec:backend}
 The model-based testing engine consists of three parts: i.e., model analyzer, test generation
 engine, and blockchain driver.
@@ -324,7 +302,7 @@ It can easily be extended to other blockchain platforms.
 %The instances can be indexed from contract name without much effort, and the driver ensures that the indexed are the latest instance of contract.
 
 
-\section{Evaluation}
+\subsection{Evaluation}
 \label{sec:eval}
 
 In this section, we evaluate \modcon on the \wecredit smart contract application from \company and
@@ -361,8 +339,10 @@ All cases were evaluated on the FISCO BCOS blockchain.
 		\caption{\code{BlindAuction}: transition cov.}
 		\label{fig:auction-transition}
 	\end{subfigure}
-	\caption{State and transition coverage achieved per test for \wecredit and
+	\caption{State and transition coverage achieved for \wecredit and
 		\code{BlindAuction}.}\label{fig:coverage}
+%	\caption{State and transition coverage achieved per test for \wecredit and
+%		\code{BlindAuction}.}\label{fig:coverage}
 \end{figure}
 
 %\begin{figure}[ht]
@@ -405,7 +385,7 @@ We reported this error to the \wecredit developer team from \company, and they c
 real bug.
 The demonstration video of \modcon, along with more cases and experiment results, can be accessed at: \modconurl.
 
-\section{Related Work}
+\subsection{Related Work}
 \label{sec:related_work}
 
 %Smart contract development is very different from traditional programming such that developers
@@ -450,13 +430,15 @@ abstract model of the target contract to automatically derive tests.
 It serves as a complement to other static validation/construction techniques in providing more
 flexible and accurate quality assurance solutions.
 
-\section{Conclusion}
+\subsection{Conclusion}
 \label{sec:conclude}
 
-In this paper, we described the architecture of \modcon, its user interface, and prominent features.
+In this section, we described the architecture of \modcon, its user interface, and prominent features.
 We also demonstrated the effectiveness of it on real smart contract applications from \company.
 The model-based testing capability of \modcon enables it to generate higher-quality test cases for
 enterprise smart contracts from permissioned and consortium blockchains.
 %Its Web-based interface allows users to easily access the testing services.
 %In the future, we plan to extend \modcon's testing capabilities by supporting more blockchain
 %platforms, testing strategies and specification templates.
+
+\section{Semantic Test Oracle of Effective Fuzzing}

@@ -1,0 +1,76 @@
+%\begin{multicols}{2}
+\begin{lstlisting}[language=Solidity]
+	pragma solidity ^0.5.0;
+	
+	contract Dicether{
+		
+		address owner, server;
+		bool activated = false,  paused = true;	
+		enum Game{ENDED, ACTIVE, USECANCEL, SERVERCANCEL};
+		mapping(address=>Game) games;
+			
+		constructor(address _serverAddress) public
+		{		
+				owner = msg.sender;	
+				server = _serverAddress;
+		}
+		// Pause contract 
+		function pause() public onlyOwner onlyNotPaused
+		{
+				paused = true;
+		}    
+		// Unpause contract 
+		function unpause() public onlyOwner onlyPaused onlyActivated
+		{
+				paused = false;
+		}
+		function activate() public onlyOwner onlyNotActivated
+		{
+				activated = true;
+		}
+		function transferOwnership(address _newOwner) public onlyOwner 
+		{
+				owner = _newOwner;	
+		}
+		function transferProfitToHouse() public{
+			// transfer profit
+		}
+	
+		// Create game 
+		function createGame() public onlyNotPaused payable
+		{
+				require(games[msg.sender]==ENDED);
+				games[msg.sender] = ACTIVE;
+		}
+		// Cancel game
+		function userCancelGame() public payable
+		{
+				require(games[msg.sender]!=ENDED);
+				if (games[msg.sender]==ACTIVE){
+						games[msg.sender] = USECANCEL;
+				}else if (games[msg.sender]==SERVERCANCEL){
+						games[msg.sender] = ENDED;
+				}else{
+						revert();
+				}
+		}
+		// Cancel game
+		function serverCancelGame(address _userAddress)	public onlyServer
+		{
+				require(games[_userAddress]!=ENDED);
+				if (games[_userAddress]==ACTIVE){
+					games[_userAddress] = SERVERCANCEL;
+				}else if (games[_userAddress]==USECANCEL){
+					games[_userAddress] = ENDED;
+				}else{	revert();	}
+		}
+		// End game
+		function serverEndGame(address userAddress) public onlyServer
+		{
+				require(games[_userAddress]==ACTIVE);
+				games[_userAddress] = ENDED;
+		}
+		
+	}
+\end{lstlisting}
+%\end{multicols}

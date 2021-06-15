@@ -60,7 +60,7 @@ to significant asset loss of smart contract applications such as \texttt{EOS.WIN
 The root cause of these attacks is that certain security vulnerabilities introduced during contract development are exploited by malicious parties, causing a loss for the contract owners (and possibly other honest participants).
 Most vulnerabilities subject to programming errors, indicating a mismatch between the contract developers' expectations and how the contract code actually works.
 Therefore, much research has been dedicated to preventing attacks, discovering and mitigating such vulnerabilities.
-However, current works mainly rely on the priori security patterns, e.g., reentrancy, delegatecall, gasless send and tainted owner, bookkeeping invariants.
+However, current works mainly rely on the priori security patterns, e.g., reentrancy, delegatecall, gasless send and tainted owner.
 Although these priori security patterns has been proven effective in finding smart contract vulnerabilities,
 they are very limited in finding deeper smart contract vulnerabilities such as liquidity bug, data integrity bug and etc.
 
@@ -81,7 +81,7 @@ In contrast, the permissioned blockchains aim to create real value.
 For instance, FISCO BCOS has been successfully adopted in areas such as government and judicial services, supply chain, finance, health care, copyright management, education, transportation, and agriculture~\cite{fisco}.
 The smart contracts powering these enterprise applications are more sophisticated and often demonstrate strong stateful behaviors.
 However, existing testing and analysis tools~\cite{jiang2018contractfuzzer,oyente,securify,SmartCheck,wang2019vultron} target only simple smart contracts and mainly focus on their security issues, which will not work well in these stateful enterprise smart contracts due to the lack of understanding of system behaviours, absence of test oracles and missing measurement of test adequacy.
-The aforementioned enterprise smart contracts on permissioned blockchains are usually well specified, which make it suitable for model based testing (MBT).
+The aforementioned enterprise smart contracts on permissioned blockchains are usually well specified, which make it suitable for model-based testing (MBT).
 
 Fairness is also a critical factor of smart contract reliability. 
 However, fairness issues of smart contracts have not yet attracted much attention.
@@ -99,7 +99,8 @@ On the other hand, it is rather difficult, for inexperienced users, to tell whet
 
 
 \section{Research Objective}
-
+In summary, the research objective is to address the aforementioned challenges on security and reliability of smart contracts.
+In a word, these challenges include the lack of specification, model-based testing and general fairness analysis framework mainly for reliability and effective fuzzing, access control analysis and runtime verification mainly for security.
 \begin{figure}
 	\centering
 	\includegraphics{./Figures/Chapter1/ThesisOverview}
@@ -107,11 +108,11 @@ On the other hand, it is rather difficult, for inexperienced users, to tell whet
 	\label{fig: thesisoverview}
 \end{figure}
 
-To conclude, in this paper, our (future) research aims are threefold:
-(1) Ensure smart contract security by performing model based testing for enterprise smart contracts. 
-(2) Learn likely specification requirement of smart contracts via time travel on transaction history. 
-(3) Verify smart contract fairness of smart contract that reflect the interactions between users and contract.
-
+Figure~\ref{fig: thesisoverview} outlines the current and future research topics for achieving enforcing security and reliability of smart contracts.
+Chapter~\ref{ch:faircon} will propose a general fairness verification framework for smart contracts.
+The model-based testing frameworks for smart contracts will be presented in Chapter~\ref{ch:modcon} followed by the semantic test oracle of effective fuzzing.
+The access control analysis framework will be discussed in Chapter~\ref{ch:accesscontrol},  while the future work will be briefed in Chapter~\ref{ch:future_work}.
+Finally this report will be concluded in Chapter~\ref{ch:conclusion}.
 
 \section{Main Work and Contribution}
 %Our research aims are twofold: (1) ensure smart contract security by performing model based testing for stateful enterprise smart contracts and DApp smart contracts rich in transactions. 
@@ -123,29 +124,51 @@ Our main works and contributions are summarized as follows.
 %For example, what you have designed, proved, implemented, and evaluated.}
 %\vspace{-.05in}
 \begin{itemize}[leftmargin=*,topsep=4pt]
-\item We proposed a general fairness verification framework, \faircon, to check fairness properties of smart contracts.
-In particular, we demonstrated \faircon on two types of contracts and four types of fairness properties.
+\item We proposed a general fairness verification framework, \faircon, to check fairness properties of
+smart contracts.
+In particular, we demonstrated \faircon on two types of contracts and four types of fairness
+properties.
+We defined intermediate representations for auction and voting contracts, and designed a
+(semi-)automated approach to translate contract source code into mathematical mechanism models
+which enable fairness property checking.
 In addition to discovering property violations for bounded models, we apply formal
 verification to prove satisfaction of properties for the unbounded cases as well.
+We implemented \faircon and evaluated it on 17 real-world Ethereum smart contracts.
+The results show that \faircon is able to effectively detect fairness violations and prove fairness
+properties for common types of game-like contracts.
+%  most auction contracts have fairness issues. Among 12 auction
+%  contract, 8 contracts were found unfair and 4 auction contracts are fair on one to three
+%fairness
+%  properties.
+The dataset, raw results, and prototype used are available online:
+\url{https://doi.org/10.21979/N9/0BEVRT}.
 
 \item We designed \modcon allowing users to provide a test model for smart contracts. 
-The model is used to specify the state definitions, expected transition relations, pre/post conditions for each transition, invariants, and the mapping from the model to the contract code.
-Given the test model, the testing process can also customized by choosing from different coverage strategies and test prioritization options.
-\modcon then generates tests with the goal that exercise as many system behaviors as possible while prioritizing on cases of particular interests.
+The model is used to specify the state definitions, expected transition relations,
+pre/post conditions to be satisfied for each transition, invariants, and the mapping from the
+model to the contract code.
+With the test model given, users can further customize the testing process by choosing from
+different coverage strategies and test prioritization options.
+\modcon then generates tests with the goal of exercising as many system behaviors as possible while
+prioritizing on cases of particular interests.
+Any violation of the specified oracle is recorded and reported to users.
+\modcon has a Web-based interface, providing easy access to all the testing capabilities and
+customization options.
+Source code and a video demonstrating the usage of \modcon are available at \modconurl.
 
 %\item  We proposed a novel approach to apply history transactions for reverse engineering access control models of smart contract. 
 %We extracted role-based access control models from history transactions and studied and verified two types of access constraints: (1) separation of duty constraint, and (2) cardinality constraint.
 \end{itemize}
 
-
-
-\section{Organizations}
-The rest of the thesis is organized as follows.
-\Cref{ch:preliminary} presents the necessary background about smart contract and blockchain transaction.
-The general fairness verification framework, \faircon, will be discussed in \Cref{ch:faircon}.
-\Cref{ch:modcon} introduces \modcon, a model-based testing platforms of smart contract.
-\Cref{ch:futurework} illustrates our future work, which aims to find permission bugs via time travel on transaction history of smart contracts,
-and then this report will be concluded in \Cref{ch:conclusion}.
+%
+%
+%\section{Organizations}
+%The rest of the thesis is organized as follows.
+%\Cref{ch:preliminary} presents the necessary background about smart contract and blockchain transaction.
+%The general fairness verification framework, \faircon, will be discussed in \Cref{ch:faircon}.
+%\Cref{ch:modcon} introduces \modcon, a model-based testing platforms of smart contract.
+%\Cref{ch:futurework} illustrates our future work, which aims to find permission bugs via time travel on transaction history of smart contracts,
+%and then this report will be concluded in \Cref{ch:conclusion}.
 
 %\paragraph{Key Terms}
 %Smart Contract; Model-based testing; Fairness verification; Program invariant; Automata learning.

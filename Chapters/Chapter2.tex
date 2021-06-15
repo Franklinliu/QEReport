@@ -1,137 +1,68 @@
 %!TEX root=../mythesis.tex
 % Chapter Template
 
-\chapter{Toward Automated Verification of Smart Contract Fairness} % Main chapter title
+\chapter{Fairness Verification} % Main chapter title
 \chaptermark{FairCon: Toward Automated Verification of Smart Contract Fairness}  % replace the chapter name with its abbreviated form
 \label{ch:faircon} 
 % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
+In this chapter, we present \faircon, a framework for verifying fairness properties of smart contracts.
 \section{Introduction}\label{Sec_Introduction}
-The blockchain technology has been developed rapidly in recent years, since the introduction of
-Bitcoin~\cite{nakamoto2008bitcoin} by Nakamoto in 2008.
-The distributed and tamper-resistant nature of blockchain has made it the perfect platform for
-hosting smart contracts.
-%Nowadays, blockchain technology has been widely applied to support many critical complicated
-%systems by resorting to Turing-complete smart contract, thus there are a lot of booming
-%applications beyond cryptocurrencies, which have not yet to be studied very well.
-Smart contracts are computer programs running atop blockchain platforms to manage large sums of
-money, carry out transactions of assets, and govern the transfer of digital rights between multiple
-parties.
-Ethereum~\cite{Ethereum} and EOS~\cite{EOS} are among the most popular blockchain platforms which
-support smart contracts and have them applied in many areas.
-%Among those platforms, Ethereum is considered one of the most promising where millions of smart
-%contracts are running on.
-%These smart contracts have shown their enormous capability to apply to diverse fields such as
-%electronic auction and computer games, where centralized software platforms have not worked very
-%well.
-%It also has its unique advantage beyond past technology, especially for some other unexpected
-%domains such as the token economy.
-As of February 2020, there are over one million smart contracts deployed on Ethereum, which is a 100
-fold increase since just two years ago.
-These smart contracts have enabled about 2.7K decentralized applications (DApps)~\cite{dapp-stats}
-serving 20K daily users on finance, health, governance, gambling, games, etc.
-%As we know, in 2019, Moscow adopted smart contract technology in its parliament election
-%\cite{election_attacks}.
-%However, according to Gaudry reports \cite{gaudry2019breaking}, we know
-%that this voting system is not perfect since it is said to be at the risk of encryption leakage.
-%We also know that for EOS platforms, attacks to the game have caused faithful players suffering a
-%lot, such as Dice, EOS attacks~\cite{EOS_attacks}.
-%For the Ethereum platform, the DAO attack~\cite{DAO_attacks} is the most famous security event
-%which brings the loss of \$60,000,000 worth, where the attacker exploited the reentrancy
-%vulnerability underlying the DAO contract. T
-%he smart contract, as a booming technology, is inclined to high chance of being attacked because
-%of its immaturity in its characteristics and poor development quality by non-expert developers.
-
-%Therefore with the increasing impact of security events in the smart contract, there are a
-%considerable number of researches focus on these security problems. Oyente
-%\cite{oyente,luu2016making} deserved high acknowledgment to first present a wide existence of some
-%of the mentioned vulnerabilities in the smart contract on a large scale. Atzei et al.
-%\cite{atzei2016survey} surveyed and analyzed large amounts of existing attack reports to offer a
-%relatively comprehensive taxonomy of vulnerabilities based on different occurring contexts and
-%characteristics. At the same time, some researches focus on the detection of malicious smart
-%contracts \cite{bhargavan2016formal, grishchenko2018semantic, hirai2016formal,
-%hildenbrandt2017kevm, park2018formal}. However, all of them have not considered the properties of
-%smart contract beyond the security, which is the fairness property of smart
-%contract.
-
-%\begin{comment}
-%\yi{This paragraph seems not so directly related. maybe put it in related work. better to focus on
-%fairness in the intro: what are the different fairness considerations/properties?}
-%Therefore with the increasing impact of security events in smart contract, there is a considerable
-%number of researches focus on these security problems, which we can divide into two perspectives.
-%One is to migrate traditional program security domain knowledge to the smart
-%contract.
-%Survey have presented possible bug types in smart contract including common integer overflow, owing
-%to which Meitu Coin had been ruined, exception disorder that in essence seems likely to resemble
-%exception handling in Java and other programming language. Lots of tools have been created to
-%explore these bugs or to avoid these vulnerabilities. Among of which, Oyente
-%\cite{oyente,luu2016making} deserved high acknowledgment to first present widely existence of some
-%of the mentioned vulnerabilities in smart contract at large scale. The other one could be the
-%research coupled with the application domain of
-%smart contract. Of the different application domains, ERC token has been studied by many researches.
-%[]  Token specification, [] Token event order consistency, [] token behaviors. However, all of
-%them have not considered the properties of the smart contract after the security guaranteed, which
-%is we focus on the
-%fairness properties of the smart contract.
-%\end{comment}
-
-The security of smart contracts has been at the center of attention, ever since their adoption in
-the management of massive monetary transactions.
-One of the most notorious cases is the DAO attack~\cite{DAO_attacks} on Ethereum, which resulted in
-a loss of \$60 million worth, due to the \emph{reentrancy vulnerability} being exploited by
-malicious attackers.
-Several gambling games on EOS, including \texttt{EOS.WIN} and \texttt{EOSPlay}, were recently
-hacked using a technique called the \emph{transaction congestion attack}~\cite{EOS_attacks} and led
-to significant asset loss.
-What these incidents share in common is that certain security vulnerabilities neglected during
-contract development are exploited by malicious parties, causing a loss for the contract owners
-(and possibly other honest participants).
-These vulnerabilities are programming errors, indicating a mismatch between the contract
-developers' expectations and how the contract code actually works.
-They are easy to detect once the vulnerability patterns are recognized.
-In fact, much research has been dedicated to preventing, discovering, and mitigating such attacks.
-
-In contrast, the \emph{fairness} issues of smart contracts have not yet attracted much attention.
-A smart contract is unfair to certain participants if there is a mismatch between the participants'
-expectations and the actual implementation of the game rules.
-It is possible that a malicious party may gain an advantage over others through the exploitation of
-security vulnerabilities, e.g., examining other participants' actions in a sealed game.
-In this paper, we would like to focus more on the fairness issues introduced by the logical design
-of the contracts instead, which are orthogonal to the security issues.
-For example, smart contracts may well be advertised as ``social games'' with a promised 20\% return
-for any investment, but turn out to be ``Ponzi schemes''~\cite{BARTOLETTI2020259}.
-In this case, the possibility that the game may eventually slow down and never pay back is
-intentionally left out.
-Similarly, many auction DApps claim to be safe and fair, yet it is still possible for bidders to
-collude among themselves or with the auctioneer to make a profit at the expenses of the
-others~\cite{wu2018cream}.
-The fairness issues mostly reside in contract logic: some of them are unfair by design, while the
-rest are careless mistakes.
-This makes the detection of such issues particularly challenging, because every case can be
-different and there is no hope in identifying predefined patterns.
-Since it is often not the contract creators' interest at risk (or even worse when they gain at the
-expenses of participants), there is little incentive for them to allocate resources in ensuring the
-fairness of their contracts.
-On the other hand, it is rather difficult, for inexperienced users, to tell whether a contract works
-as advertised, even with the source code available.
-
-%The fairness problem exists even though security of smart contract are assured.
-%Specifically, mechanism design is to study how to allocate resource to different participants.
-%However, the mechanism design behind smart contract can be biased and the contract may be
-%beneficial to several users, meanwhile other users will suffer loss.
-%Because this problem should be ascribed
-%to how well the mechanism design is for the smart contract. Unfortunately, the mechanism-related
-%fairness property
-%can not be tested or verified using existing work. Due to smart contract steadily extending its
-%use in more critical domains such
-%as auction and voting system and etc., understanding mechanism design could help relieve the
-%fairness problems that smart contract will
-%be confronted with.
-
-%For smart contract, its mechanism design largely seems to be transparent to the participants.it
-%might still be challenging for normal participants to understand the obscure syntax and subtle
-%semantic implications of the contract source code.
-In this paper, we present \faircon, a framework for verifying fairness properties of smart contracts.
+%The blockchain technology has been developed rapidly in recent years, since the introduction of
+%Bitcoin~\cite{nakamoto2008bitcoin} by Nakamoto in 2008.
+%The distributed and tamper-resistant nature of blockchain has made it the perfect platform for
+%hosting smart contracts.
+%
+%Smart contracts are computer programs running atop blockchain platforms to manage large sums of
+%money, carry out transactions of assets, and govern the transfer of digital rights between multiple
+%parties.
+%Ethereum~\cite{Ethereum} and EOS~\cite{EOS} are among the most popular blockchain platforms which
+%support smart contracts and have them applied in many areas.
+%
+%As of February 2020, there are over one million smart contracts deployed on Ethereum, which is a 100
+%fold increase since just two years ago.
+%These smart contracts have enabled about 2.7K decentralized applications (DApps)~\cite{dapp-stats}
+%serving 20K daily users on finance, health, governance, gambling, games, etc.
+%
+%The security of smart contracts has been at the center of attention, ever since their adoption in
+%the management of massive monetary transactions.
+%One of the most notorious cases is the DAO attack~\cite{DAO_attacks} on Ethereum, which resulted in
+%a loss of \$60 million worth, due to the \emph{reentrancy vulnerability} being exploited by
+%malicious attackers.
+%Several gambling games on EOS, including \texttt{EOS.WIN} and \texttt{EOSPlay}, were recently
+%hacked using a technique called the \emph{transaction congestion attack}~\cite{EOS_attacks} and led
+%to significant asset loss.
+%What these incidents share in common is that certain security vulnerabilities neglected during
+%contract development are exploited by malicious parties, causing a loss for the contract owners
+%(and possibly other honest participants).
+%These vulnerabilities are programming errors, indicating a mismatch between the contract
+%developers' expectations and how the contract code actually works.
+%They are easy to detect once the vulnerability patterns are recognized.
+%In fact, much research has been dedicated to preventing, discovering, and mitigating such attacks.
+%
+%In contrast, the \emph{fairness} issues of smart contracts have not yet attracted much attention.
+%A smart contract is unfair to certain participants if there is a mismatch between the participants'
+%expectations and the actual implementation of the game rules.
+%It is possible that a malicious party may gain an advantage over others through the exploitation of
+%security vulnerabilities, e.g., examining other participants' actions in a sealed game.
+%In this paper, we would like to focus more on the fairness issues introduced by the logical design
+%of the contracts instead, which are orthogonal to the security issues.
+%For example, smart contracts may well be advertised as ``social games'' with a promised 20\% return
+%for any investment, but turn out to be ``Ponzi schemes''~\cite{BARTOLETTI2020259}.
+%In this case, the possibility that the game may eventually slow down and never pay back is
+%intentionally left out.
+%Similarly, many auction DApps claim to be safe and fair, yet it is still possible for bidders to
+%collude among themselves or with the auctioneer to make a profit at the expenses of the
+%others~\cite{wu2018cream}.
+%The fairness issues mostly reside in contract logic: some of them are unfair by design, while the
+%rest are careless mistakes.
+%This makes the detection of such issues particularly challenging, because every case can be
+%different and there is no hope in identifying predefined patterns.
+%Since it is often not the contract creators' interest at risk (or even worse when they gain at the
+%expenses of participants), there is little incentive for them to allocate resources in ensuring the
+%fairness of their contracts.
+%On the other hand, it is rather difficult, for inexperienced users, to tell whether a contract works
+%as advertised, even with the source code available.
 Since general fairness is largely a subjective concept determined by personal preferences, there is
 no universal truth when considering only a single participant.
 We view a smart contract as a game (or mechanism~\cite{jackson2014mechanism,nisan2001algorithmic}),
@@ -211,34 +142,34 @@ The experimental results show that there are many smart contracts violating fair
 %problems could be , For voting, general mechanism could be and its problems could be
 %\end{comment}
 
-\paragraph{Contributions}
-Our main contributions are summarized as follows.
+%\paragraph{Contributions}
+%Our main contributions are summarized as follows.
 %\yi{Spell out the contributions directly, not through questions.
 %For example, what you have designed, proved, implemented, and evaluated.}
 %\vspace{-.05in}
-\begin{itemize}[leftmargin=*,topsep=4pt]
-	\item We proposed a general fairness verification framework, \faircon, to check fairness properties of
-	smart contracts.
-	In particular, we demonstrated \faircon on two types of contracts and four types of fairness
-	properties.
-	\item We defined intermediate representations for auction and voting contracts, and designed a
-	(semi-)automated approach to translate contract source code into mathematical mechanism models
-	which enable fairness property checking.
-	\item In addition to discovering property violations for bounded models, we apply formal
-	verification to prove satisfaction of properties for the unbounded cases as well.
-	\item We implemented \faircon and evaluated it on 17 real-world Ethereum smart contracts.
-	The results show that \faircon is able to effectively detect fairness violations and prove fairness
-	properties for common types of game-like contracts.
-	%  most auction contracts have fairness issues. Among 12 auction
-	%  contract, 8 contracts were found unfair and 4 auction contracts are fair on one to three
-	%fairness
-	%  properties.
-	The dataset, raw results, and prototype used are available online:
-	\url{https://doi.org/10.21979/N9/0BEVRT}.
-\end{itemize}
+%\begin{itemize}[leftmargin=*,topsep=4pt]
+%	\item We proposed a general fairness verification framework, \faircon, to check fairness properties of
+%	smart contracts.
+%	In particular, we demonstrated \faircon on two types of contracts and four types of fairness
+%	properties.
+%	\item We defined intermediate representations for auction and voting contracts, and designed a
+%	(semi-)automated approach to translate contract source code into mathematical mechanism models
+%	which enable fairness property checking.
+%	\item In addition to discovering property violations for bounded models, we apply formal
+%	verification to prove satisfaction of properties for the unbounded cases as well.
+%	\item We implemented \faircon and evaluated it on 17 real-world Ethereum smart contracts.
+%	The results show that \faircon is able to effectively detect fairness violations and prove fairness
+%	properties for common types of game-like contracts.
+%	%  most auction contracts have fairness issues. Among 12 auction
+%	%  contract, 8 contracts were found unfair and 4 auction contracts are fair on one to three
+%	%fairness
+%	%  properties.
+%	The dataset, raw results, and prototype used are available online:
+%	\url{https://doi.org/10.21979/N9/0BEVRT}.
+%\end{itemize}
 
 \paragraph{Organizations}
-The rest of the paper is organized as follows.
+The rest of this chapter is organized as follows.
 \Cref{Sec_MotivatingExample} illustrates the workflow of \faircon with an example.
 \Cref{section:mechanism_property} presents a general mechanism analysis model and defines a
 modeling language customized for auction and voting contracts, serving as an intermediate
@@ -246,8 +177,7 @@ representation between the contract source code and the underlying mechanism mod
 We then describe the model construction and fairness checking as well as verification techniques in
 \cref{Sec_Method}.
 \Cref{Sec_Evaluation} gives details on the implementation and presents the evaluation results.
-\Cref{Sec_RelatedWorks,Sec_Conclusion} compare \faircon with the related work and
-conclude the paper, respectively.
+\Cref{Sec_RelatedWorks,Sec_Conclusion} compare \faircon with the related work and summarize the chapter, respectively.
 
 
 
@@ -1816,8 +1746,8 @@ In contrast, we provide a more general framework with maximal automation support
 
 %However, different from these works focus on the application, our work focuses on using mechanism models to detect the fairness of smart contracts.
 
-\section{Conclusion and Future Work}\label{Sec_Conclusion}
-In this paper, we proposed an approach to analyze fairness properties of smart
+\section{Conclusion}\label{Sec_Conclusion}
+In this chapter, we proposed an approach to analyze fairness properties of smart
 contracts.
 We implemented \faircon to automatically extract mechanism models from smart contracts with
 user-provided annotations, and experimentally evaluated it on 17 real-world auction and
@@ -1831,8 +1761,8 @@ and able to prove fairness for common types of contracts.
 %And \faircon will help smart contract creators identify potential risks when setting up
 %smart contract applications such as auction or voting.
 
-In the future, we would like to apply \faircon to other types of smart contracts beyond
-auction and voting.
-It can also be extended to check for other types of fairness properties that are critical
-in maintaining the integrity of blockchain applications.
+%In the future, we would like to apply \faircon to other types of smart contracts beyond
+%auction and voting.
+%It can also be extended to check for other types of fairness properties that are critical
+%in maintaining the integrity of blockchain applications.
 

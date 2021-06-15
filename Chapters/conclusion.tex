@@ -1,9 +1,27 @@
-\chapter{Conclusion} % Main chapter title
+\chapter{Conclusion and Future Work} % Main chapter title
 \chaptermark{Conclusion}  % replace the chapter name with its abbreviated form
 \label{ch:conclusion} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-This report compiles the published works that I have done on model based testing of smart contracts, automatic fairness verification of smart contracts.
-The promising results of these works provide strong support for the efficiency and capability of model-based testing compared to existing testing methods 
-and for the importance of fairness problem related to smart contracts, which usually deviates from the expectation of novice contract users respectively.
-The future work on finding permission bugs via time travel on transaction history of smart contracts has also been briefly illustrated and will be finished in the near future.
-Meanwhile, a big picture of the framework to enforce both security and fairness of smart contracts remains a quite challenge which I will also explore further.
+%\section{Conclusion}
+This report presents an thesis overview on security and reliability of smart contracts.
+The report mainly compiles the published works that I have done on fairness verification (see Chapter~\ref{ch:faircon}), model based testing and fuzzing (see Chapter~\ref{ch:modcon}) of smart contracts.
+The promising results of these works highlight the importance of fairness problem related to smart contracts, which usually deviates from the expectation of novice contract users respectively, and demonstrate the efficiency of model-based testing in coverage and implementation error detection, and witness the power of semantic test oracle.
+The current access control analysis work aims to find user permission bugs via time travel on transaction history of smart contracts. 
+Its analysis framework is also illustrated in Chapter~\ref{ch:accesscontrol} and the evaluation will be finished in the near future.
+
+\section{Future Work}
+Meanwhile, there are other unaddressed research topics outlined in fig.~\ref{fig: thesisoverview} of Chapter~\ref{ch:introduction}.
+\begin{itemize}
+	\item \textbf{Runtime Verification}. Runtime verification is a lightweight technique sitting between formal verification and testing.
+	There are many runtime verification tools~\cite{chen2020soda,akca2019solanalyser} for the detection of predefined vulnerable patterns via the code instrument to EVM clients~\cite{chen2020soda} or smart contracts~\cite{akca2019solanalyser}. 
+	However, these predefined vulnerable patterns are often simple and usually not precise and the code instrument will incur other cost such as the blockchain fork and increased gas consumption.
+	On the other hand, they are not suitable for the verification of dynamic security policy.
+	Security policy of smart contracts can be changed at the runtime, which is hard to be covered by predefined patterns.
+	Therefore, the future work, runtime verification will target dynamic security policy and this will be implemented via oracle mechanisms to ensure smart contract security on-the-fly.
+	\item \textbf{Specification Mining}. 
+	Although a considerable number of formal specification techniques have been proposed in contract level or program level~\cite{tolmach2020survey},
+	there are very limited smart contracts that is well specified or documented~\cite{born2020formal, azure-workbench}.
+	Without specification, the evaluation of smart contract is relatively restricted for common security concern or fairness concern, which needs domain knowledge instead.
+	In this future work, specification will be mined from smart contracts, either from its implementation or its running logs.
+	We hope specification mining could facilitate the better evaluation of smart contracts in the research community.
+\end{itemize}

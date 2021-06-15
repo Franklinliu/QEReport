@@ -1,0 +1,35 @@
+\begin{figure}
+\centering
+\begin{tikzpicture}[rounded corners=2pt, line width=1pt]
+	\tikzstyle{role}=[fill={rgb:black,1;white,50}, ellipse,draw, text width=0.6cm, text centered]
+	\draw (0, 2) node[role]  (A1) {A};
+%	\draw (0, 2) ellipse (2cm and 1cm) ;
+	\draw (0, 0)	node[role] (B1) {B};
+	\draw ([yshift=-10pt]B1.south) node[] (integrity) {(1) Integrity};
+	
+	\draw[->] (A1.south) -- (B1.north);
+	\draw (1.5, 1)  node[role] (A2)  {A};
+	\draw (3.5, 1)  node[role] (B2) {B};
+	
+	\draw[->]  ([yshift=-2pt, xshift=4pt]A2.north east) -- ([yshift=-2pt, xshift=-4pt]B2.north west);
+	\draw[<-] ([yshift=2pt, xshift=4pt]A2.south east) -- ([yshift=2pt, xshift=-4pt]B2.south west);
+	
+	\draw [line width=2pt] ([yshift=15pt, xshift=3pt]A2.east) -- ([yshift=-15pt, xshift=-3pt]B2.west);
+	\draw [line width=2pt] ([yshift=-15pt, xshift=-3pt]A2.east) -- ([yshift=15pt, xshift=3pt]B2.west);
+	
+	\draw ([xshift=50pt]integrity.east) node[] (separation) {(2) Separation of duty};
+	
+	\draw (5.0, 0.5)  node[role] (A3) {A};
+	\draw (6, 2)  node[ role] (B3) {B};
+	\draw (7, 0.5)  node[ role] (C3) {C};
+%	\draw[black, semitransparent] (6, 1) circle[radius=1.8] ;
+	\draw[<->]  (A3.east) -- (C3.west); 
+	\draw[<->]  (C3.north) -- ([yshift=3pt, xshift=12pt]B3.south);
+	\draw[<->]  ([yshift=3pt, xshift=-12pt]B3.south) -- (A3.north);
+
+	\draw ([xshift=50pt]separation.east) node[] {(3) Cardinality (Session)};
+	
+\end{tikzpicture}
+\caption{Overview of security policy.}
+\label{fig: policy}
+\end{figure}
